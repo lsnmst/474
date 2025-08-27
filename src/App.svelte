@@ -73,7 +73,7 @@
 <div class="layout">
   <div class="left">
     <header class="main-header">
-      474, JACARÉ COPACABANA: OFICINA DE CARTOGRAFIA CRÍTICA
+      474, JACARÉ COPACABANA: DATA CRITIC
     </header>
     <Home />
 
@@ -101,7 +101,8 @@
               >
               {#if m.decodeRefs?.length}
                 <div class="related">
-                  <small>
+                  <small
+                    >Consulte
                     {#each getDecodeItems(m.decodeRefs) as r}
                       <a
                         href={r.link}
@@ -133,7 +134,8 @@
               {/if}
               {#if d.decodeRefs?.length}
                 <div class="related">
-                  <small>
+                  <small
+                    >Consulte
                     {#each getDecodeItems(d.decodeRefs) as r}
                       <a
                         href={r.link}
@@ -324,8 +326,8 @@
 
   .close-btn {
     position: absolute;
-    top: 0.25rem;
-    right: 0.25rem;
+    top: 1rem;
+    right: 1rem;
     border: none;
     color: black;
     background: none;

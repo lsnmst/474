@@ -5,9 +5,9 @@ export const textos = [
 
 export const mapas = [
     {
-        title: "Mapa 1",
+        title: "Quais linhas operaram veículos sem ar condicionado em 17 de fevereiro de 2025, durante a onda de calor Nível de Calor 4 (NC4)",
         link: "/mapas/mapa1",
-        decodeRefs: ["/decode/decode1", "/decode/decode5"]
+        decodeRefs: ["/decode/decode1"]
     },
 ];
 
@@ -15,19 +15,33 @@ export const dadosLinks = [
     {
         title: "Tabela com todos os registros de GPS",
         link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_onibus_gps&t=sppo_registros&page=table",
-        decodeRefs: ["/decode/decode1", "/decode/decode5"]
+        decodeRefs: []
     },
     {
-        title:
-            "Tabela de contagem do número de passageiros por hora. Agrega valores da tabela de transações por: data, hora, modo, consorcio, operadora, servico, sentido e tipo de transacao",
+        title: "Tabela de posições de GPS de todos os validadores da Jaé instalados, incluindo estado do equipamento, serviço, sentido e veículo associado e temperatura do veículo.",
+        link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=gps_validador&page=table",
+        decodeRefs: ["/decode/decode1"]
+    },
+    {
+        title: "Tabela de contagem do número de passageiros por hora. Agrega valores da tabela de transações por: data, hora, modo, consorcio, operadora, servico, sentido e tipo de transacao",
         link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_hora&page=table",
-        decodeRefs: ["/decode/decode1", "/decode/decode5"]
+        decodeRefs: []
+    },
+    {
+        title: "GTFS - Viagens para cada rota",
+        link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=gtfs&t=trips&page=table",
+        decodeRefs: ["/decode/decode1"]
+    },
+    {
+        title: "GTFS - Shapes em formatos geográficos para cada rota",
+        link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=gtfs&t=shapes_geom&page=table",
+        decodeRefs: ["/decode/decode1"]
     },
     {
         title:
             "Tabela com informações da Jaé sobre as transações realizadas no sistema de transporte municipal",
         link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=transacao&page=table",
-        decodeRefs: ["/decode/decode1", "/decode/decode5"]
+        decodeRefs: []
     },
 ];
 
