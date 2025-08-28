@@ -9,6 +9,11 @@ export const mapas = [
         link: "/mapas/mapa1",
         decodeRefs: ["/decode/decode1"]
     },
+    {
+        title: "Lendo o censo, quem mora nas áreas atravessadas pela rota do 474? Uma leitura por cor/raça",
+        link: "/mapas/mapa2",
+        decodeRefs: ["/decode/decode5"]
+    },
 ];
 
 export const dadosLinks = [
@@ -21,6 +26,11 @@ export const dadosLinks = [
         title: "Tabela de posições de GPS de todos os validadores da Jaé instalados, incluindo estado do equipamento, serviço, sentido e veículo associado e temperatura do veículo.",
         link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=gps_validador&page=table",
         decodeRefs: ["/decode/decode1"]
+    },
+    {
+        title: "Tabela com os dados tratados de registros de GPS do SPPO, incluindo velocidade estimada, estado de movimento, parada em terminal ou garagem e interseção com o traçado da linha informada",
+        link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_veiculos&t=gps_sppo&page=table",
+        decodeRefs: ["/decode/decode5"]
     },
     {
         title: "Tabela de contagem do número de passageiros por hora. Agrega valores da tabela de transações por: data, hora, modo, consorcio, operadora, servico, sentido e tipo de transacao",
@@ -42,6 +52,12 @@ export const dadosLinks = [
             "Tabela com informações da Jaé sobre as transações realizadas no sistema de transporte municipal",
         link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=transacao&page=table",
         decodeRefs: []
+    },
+    {
+        title:
+            "Censo Demográfico 2010: Agregados por Setores Censitários - Resultados do Universo",
+        link: "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2010/Resultados_do_Universo/Agregados_por_Setores_Censitarios/",
+        decodeRefs: ["/decode/decode5"]
     },
 ];
 

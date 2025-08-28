@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@panzoom/panzoom": "^4.6.0",
+    "leaflet": "^1.9.4",
     "prismjs": "^1.30.0",
     "svelte-spa-router": "^4.0.1",
     "svg-pan-zoom": "^3.6.2"

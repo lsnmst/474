@@ -88,6 +88,18 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  background-color: #f3f3e4 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

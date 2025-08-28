@@ -8,6 +8,7 @@
   import Texto3 from "./routes/Texto3.svelte";
   import Texto4 from "./routes/Texto4.svelte";
   import Mapa1 from "./routes/Mapa1.svelte";
+  import Mapa2 from "./routes/Mapa2.svelte";
   import Dados from "./routes/Dados.svelte";
   import Decode1 from "./routes/Decode1.svelte";
   import Decode2 from "./routes/Decode2.svelte";
@@ -26,6 +27,7 @@
     "/textos/texto3": Texto3,
     "/textos/texto4": Texto4,
     "/mapas/mapa1": Mapa1,
+    "/mapas/mapa2": Mapa2,
     "/dados": Dados,
     "/decode/decode1": Decode1,
     "/decode/decode2": Decode2,
@@ -72,13 +74,11 @@
 
 <div class="layout">
   <div class="left">
-    <header class="main-header">
-      474, JACARÉ COPACABANA: DATA CRITIC
-    </header>
+    <header class="main-header">474, JACARÉ COPACABANA: DATA CRITIC</header>
     <Home />
 
     <div class="columns">
-      <section bind:this={textosColumn}>
+      <section class="texto-col" bind:this={textosColumn}>
         <h4>BIBLIOTECA</h4>
         <ul>
           {#each textos as t}
@@ -91,7 +91,7 @@
         </ul>
       </section>
 
-      <section bind:this={mapasColumn}>
+      <section class="mapa-col" bind:this={mapasColumn}>
         <h4>MAPAS</h4>
         <ul>
           {#each mapas as m}
@@ -118,7 +118,7 @@
         </ul>
       </section>
 
-      <section bind:this={dadosColumn}>
+      <section class="dado-col" bind:this={dadosColumn}>
         <h4>DADOS</h4>
         <ul>
           {#each dadosLinks as d}
@@ -343,6 +343,11 @@
   .content-overlay::-webkit-scrollbar {
     width: 5px;
   }
+  .dado-col::-webkit-scrollbar,
+  .mapa-col::-webkit-scrollbar,
+  .texto-col::-webkit-scrollbar {
+    width: 0;
+  }
   .left::-webkit-scrollbar-track {
     background: #f3f3e4;
   }
@@ -350,6 +355,15 @@
     background: #888;
   }
   .left::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .dado-col::-webkit-scrollbar-track {
+    background: #f3f3e4;
+  }
+  .dado-col::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  .dado-col::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
   .decode-list::-webkit-scrollbar-track {

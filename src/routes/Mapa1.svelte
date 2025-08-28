@@ -104,7 +104,9 @@
         margin-top: 10rem;
         line-height: 1.3;
         padding: 2rem;
-        background: #d2fb85;
+        color: #f3f3e4;
+        background: #c743c7;
+        border-radius: 15px;
     }
     p {
         margin: 3rem 1rem 3rem 1rem;
