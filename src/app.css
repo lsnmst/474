@@ -99,6 +99,10 @@ button:focus-visible {
   box-shadow: none !important;
 }
 
+.svg-container {
+  border: none !important;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {

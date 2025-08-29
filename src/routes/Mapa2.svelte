@@ -10,7 +10,7 @@
         map = L.map("map", {
             center: [-22.937093521616838, -43.22460295163364],
             zoom: 13,
-            dragging: false,
+            dragging: true,
             scrollWheelZoom: false,
             doubleClickZoom: false,
             touchZoom: false,
@@ -54,9 +54,9 @@
     questionário do censo de 2010. Legenda:
     <span style="background-color:#73b2ff">branca</span>,
     <span style="background-color:#9fd400">parda</span>,
-    <span style="background-color:#ff0000">preta</span>,<span
-        style="background-color:#ffaa00">amarela</span
-    >,<span style="background-color:#996633">indígena</span>. Para replicar este
+    <span style="background-color:#ff0000">preta</span>,
+    <span style="background-color:#ffaa00">amarela</span>,
+    <span style="background-color:#996633">indígena</span>. Para replicar este
     mapa, confira as instruções do
     <a target="_blank" href="https://patadata.org/maparacial/how.html">Pata</a>,
     escritório de visualização e análise de dados.

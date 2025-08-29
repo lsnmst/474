@@ -1,6 +1,7 @@
 <script>
   import Router, { link } from "svelte-spa-router";
   import { textos, mapas, dadosLinks, decode } from "./data/links.js";
+  import { onMount } from "svelte";
 
   import Home from "./routes/Home.svelte";
   import Nunca from "./routes/Nunca.svelte";
@@ -70,6 +71,35 @@
   function getDecodeItems(refs) {
     return decode.filter((d) => refs.includes(d.link));
   }
+
+  let showScrollHint = false;
+
+  onMount(() => {
+    function checkOverflow() {
+      if (dadosColumn) {
+        const hasOverflow = dadosColumn.scrollHeight > dadosColumn.clientHeight;
+        const atBottom =
+          dadosColumn.scrollTop + dadosColumn.clientHeight >=
+          dadosColumn.scrollHeight - 2;
+
+        showScrollHint = hasOverflow && !atBottom;
+      }
+    }
+
+    if (dadosColumn) {
+      dadosColumn.addEventListener("scroll", checkOverflow);
+    }
+
+    checkOverflow();
+    window.addEventListener("resize", checkOverflow);
+
+    return () => {
+      if (dadosColumn) {
+        dadosColumn.removeEventListener("scroll", checkOverflow);
+      }
+      window.removeEventListener("resize", checkOverflow);
+    };
+  });
 </script>
 
 <div class="layout">
@@ -120,6 +150,7 @@
 
       <section class="dado-col" bind:this={dadosColumn}>
         <h4>DADOS</h4>
+        <div class="scroll-hint" class:visible={showScrollHint}>↓</div>
         <ul>
           {#each dadosLinks as d}
             <li>
@@ -280,6 +311,38 @@
     background: #d2fb85;
   }
 
+  .dado-col {
+    position: relative; /* so the arrow can be absolutely positioned */
+    overflow-y: auto;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 90%;
+    transform: translateX(-90%);
+    font-size: 2rem;
+    color: #555;
+    background: #d2fb85;
+    padding: 0.2rem 0.6rem;
+    display: none;
+    pointer-events: none;
+  }
+
+  .scroll-hint.visible {
+    display: block;
+    animation: bounce 1.5s infinite;
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translate(-50%, 0);
+    }
+    50% {
+      transform: translate(-50%, 6px);
+    }
+  }
   .decode-list {
     flex: 1;
     overflow-y: auto;

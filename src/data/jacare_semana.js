@@ -1,0 +1,69 @@
+export const jacare_semana = [{
+  "data": "2025-02-17",
+  "hora": "4",
+  "total_passageiros": "65"
+}, {
+  "data": "2025-02-17",
+  "hora": "5",
+  "total_passageiros": "284"
+}, {
+  "data": "2025-02-17",
+  "hora": "6",
+  "total_passageiros": "468"
+}, {
+  "data": "2025-02-17",
+  "hora": "7",
+  "total_passageiros": "639"
+}, {
+  "data": "2025-02-17",
+  "hora": "8",
+  "total_passageiros": "416"
+}, {
+  "data": "2025-02-17",
+  "hora": "9",
+  "total_passageiros": "290"
+}, {
+  "data": "2025-02-17",
+  "hora": "10",
+  "total_passageiros": "202"
+}, {
+  "data": "2025-02-17",
+  "hora": "11",
+  "total_passageiros": "205"
+}, {
+  "data": "2025-02-17",
+  "hora": "12",
+  "total_passageiros": "249"
+}, {
+  "data": "2025-02-17",
+  "hora": "13",
+  "total_passageiros": "243"
+}, {
+  "data": "2025-02-17",
+  "hora": "14",
+  "total_passageiros": "233"
+}, {
+  "data": "2025-02-17",
+  "hora": "15",
+  "total_passageiros": "249"
+}, {
+  "data": "2025-02-17",
+  "hora": "16",
+  "total_passageiros": "350"
+}, {
+  "data": "...",
+  "hora": "...",
+  "total_passageiros": "..."
+}, {
+  "data": "2025-02-21",
+  "hora": "21",
+  "total_passageiros": "91"
+}, {
+  "data": "2025-02-21",
+  "hora": "22",
+  "total_passageiros": "74"
+}, {
+  "data": "2025-02-21",
+  "hora": "23",
+  "total_passageiros": "12"
+}]

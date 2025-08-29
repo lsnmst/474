@@ -1,0 +1,65 @@
+export const ponto_final = [{
+  "data": "2025-02-21",
+  "hora": "4",
+  "total_passageiros": "21"
+}, {
+  "data": "2025-02-21",
+  "hora": "5",
+  "total_passageiros": "70"
+}, {
+  "data": "2025-02-21",
+  "hora": "6",
+  "total_passageiros": "99"
+}, {
+  "data": "2025-02-21",
+  "hora": "7",
+  "total_passageiros": "86"
+}, {
+  "data": "2025-02-21",
+  "hora": "8",
+  "total_passageiros": "43"
+}, {
+  "data": "2025-02-21",
+  "hora": "9",
+  "total_passageiros": "25"
+}, {
+  "data": "2025-02-21",
+  "hora": "11",
+  "total_passageiros": "20"
+}, {
+  "data": "2025-02-21",
+  "hora": "12",
+  "total_passageiros": "24"
+}, {
+  "data": "2025-02-21",
+  "hora": "13",
+  "total_passageiros": "11"
+}, {
+  "data": "2025-02-21",
+  "hora": "14",
+  "total_passageiros": "9"
+}, {
+  "data": "2025-02-21",
+  "hora": "15",
+  "total_passageiros": "5"
+}, {
+  "data": "2025-02-21",
+  "hora": "16",
+  "total_passageiros": "12"
+}, {
+  "data": "2025-02-21",
+  "hora": "17",
+  "total_passageiros": "22"
+}, {
+  "data": "2025-02-21",
+  "hora": "18",
+  "total_passageiros": "4"
+}, {
+  "data": "2025-02-21",
+  "hora": "19",
+  "total_passageiros": "8"
+}, {
+  "data": "2025-02-21",
+  "hora": "20",
+  "total_passageiros": "3"
+}]

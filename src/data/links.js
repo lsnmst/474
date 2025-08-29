@@ -33,6 +33,11 @@ export const dadosLinks = [
         decodeRefs: ["/decode/decode5"]
     },
     {
+        title: "Tabela de contagem do número de passageiros por hora. Agrega valores da tabela de transações por: data, hora, modo, consorcio, operadora, servico, sentido e tipo_transacao",
+        link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_hora&page=table",
+        decodeRefs: ["/decode/decode2"]
+    },
+    {
         title: "Tabela de contagem do número de passageiros por hora. Agrega valores da tabela de transações por: data, hora, modo, consorcio, operadora, servico, sentido e tipo de transacao",
         link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_hora&page=table",
         decodeRefs: []
@@ -59,6 +64,12 @@ export const dadosLinks = [
         link: "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2010/Resultados_do_Universo/Agregados_por_Setores_Censitarios/",
         decodeRefs: ["/decode/decode5"]
     },
+    {
+        title: "Tabela de contagem do número de passageiros por hora. Agrega valores das tabelas transacao e transacao_riocard por: data, hora, modo, consorcio, operadora, servico, sentido, tipo_transacao e tile_id",
+        link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_tile_hora&page=table",
+        decodeRefs: ["/decode/decode2"]
+    },
+
 ];
 
 export const decode = [
