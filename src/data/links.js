@@ -38,11 +38,6 @@ export const dadosLinks = [
         decodeRefs: ["/decode/decode2"]
     },
     {
-        title: "Tabela de contagem do número de passageiros por hora. Agrega valores da tabela de transações por: data, hora, modo, consorcio, operadora, servico, sentido e tipo de transacao",
-        link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_hora&page=table",
-        decodeRefs: []
-    },
-    {
         title: "GTFS - Viagens para cada rota",
         link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=gtfs&t=trips&page=table",
         decodeRefs: ["/decode/decode1"]
@@ -75,11 +70,11 @@ export const dadosLinks = [
 export const decode = [
     { title: "Rio 60 graus", link: "/decode/decode1" },
     {
-        title: "Indo ' alimentar ' os bairros ricos da zona sul",
+        title: "Indo 'alimentar' os bairros ricos da zona sul",
         link: "/decode/decode2",
     },
-    { title: "Voltando da praia", link: "/decode/decode3" },
-    { title: "Superlotação", link: "/decode/decode4" },
+    { title: "Superlotação", link: "/decode/decode3" },
+    { title: "Dando calote voltando da praia", link: "/decode/decode4" },
     { title: "Uma questão de cor", link: "/decode/decode5" },
     { title: "Uma nova forma de exclusão a caminho?", link: "/decode/decode6" },
     {

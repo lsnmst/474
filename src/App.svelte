@@ -61,6 +61,10 @@
       const overlay = document.querySelector(".content-overlay");
       if (overlay) overlay.scrollTop = 0;
     }, 0);
+
+    if (window.innerWidth <= 768) {
+      decodeOpen = false;
+    }
   }
 
   function closeContent() {
@@ -100,6 +104,12 @@
       window.removeEventListener("resize", checkOverflow);
     };
   });
+
+  let decodeOpen = false;
+
+  function toggleDecode() {
+    decodeOpen = !decodeOpen;
+  }
 </script>
 
 <div class="layout">
@@ -184,7 +194,11 @@
     </div>
   </div>
 
-  <div class="right">
+  <button class="decode-toggle" on:click={toggleDecode}>
+    {decodeOpen ? "✕" : "☰ Decodificações"}
+  </button>
+
+  <div class="right {decodeOpen ? 'open' : ''}">
     <header class="decode-header">DECODIFICAÇÕES</header>
     <div class="decode-list">
       <ul>
@@ -401,6 +415,10 @@
     z-index: 9999;
   }
 
+  .decode-toggle {
+    display: none;
+  }
+
   .left::-webkit-scrollbar,
   .decode-list::-webkit-scrollbar,
   .content-overlay::-webkit-scrollbar {
@@ -446,5 +464,53 @@
   }
   .content-overlay::-webkit-scrollbar-thumb:hover {
     background: #555;
+  }
+
+  @media (max-width: 768px) {
+    .columns {
+      display: block;
+    }
+    .scroll-hint {
+      display: none !important;
+    }
+    .decode-toggle {
+      display: block;
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      color: #333;
+      background: #d2fb85;
+      border: 1px solid #999;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-weight: bold;
+      z-index: 2000;
+      cursor: pointer;
+    }
+
+    .right {
+      position: fixed;
+      top: 0;
+      right: -100%; /* hidden offscreen */
+      width: 80%;
+      max-width: 320px;
+      height: 100vh;
+      background: #d2fb85;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+      transition: right 0.3s ease-in-out;
+      z-index: 1500;
+    }
+
+    .content-overlay {
+      width: 90% !important;
+    }
+
+    .right.open {
+      right: 0; /* slide in */
+    }
+
+    .layout {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

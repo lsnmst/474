@@ -59,90 +59,90 @@
     }
 </script>
 
-<div class="intro-decode">
-    <div class="pres-decode">
-        <h1>Indo "alimentar" os bairros ricos da zona sul</h1>
-        <p>
-            Babás, empregadas domésticas, camareiras, vendedoras, garçons e
-            pedreiros desembarcam na zona sul todas as manhãs. A cidade está
-            planejada para que a zona norte “alimente” os bairros ricos da zona
-            sul. Enquanto os ônibus que seguem no sentido sul circulam lotados,
-            os que seguem no sentido norte ficam vazios.
-        </p>
-    </div>
-    <div class="refer-decode">
-        <h4>Banco de dados utilizado nesta decodificação</h4>
-        <ul>
-            <li>
-                <a
-                    href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_hora&page=table"
-                    target="_blank"
-                    >Tabela de contagem do número de passageiros por hora.
-                    Agrega valores da tabela de transações por: data, hora,
-                    modo, consorcio, operadora, servico, sentido e
-                    tipo_transacao</a
-                >
-            </li>
-            <li>
-                <a
-                    href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_tile_hora&page=table"
-                    target="_blank"
-                    >Tabela de contagem do número de passageiros por hora.
-                    Agrega valores das tabelas transacao e transacao_riocard
-                    por: data, hora, modo, consorcio, operadora, servico,
-                    sentido, tipo_transacao e tile_id</a
-                >
-            </li>
-        </ul>
-    </div>
-</div>
-
-<div class="content-decode">
-    <div class="split-cont">
-        <div class="split-left">
+<div class="content">
+    <div class="intro-decode">
+        <div class="pres-decode">
+            <h1>Indo "alimentar" os bairros ricos da zona sul</h1>
             <p>
-                Os dados sobre os passageiros estão disponíveis em um banco de
-                dados disponibilizado pela Secretaria Municipal de Transportes
-                chamado <a
-                    href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=gps_validador&page=table"
-                    target="_blank"
-                    >Tabela de contagem do número de passageiros por hora</a
-                >
-                (código `rj-smtr.br_rj_riodejaneiro_bilhetagem.passageiros_hora`).<br
-                />Para acessar o número de passageiros por hora embarcados no
-                474 em ambos os sentidos, entre 17 e 21 de fevereiro de 2025,
-                uma semana comun de trabalho antes do carnaval e no meio de uma
-                onda de calor, é necessário executar a seguinte busca:
+                Babás, empregadas domésticas, camareiras, vendedoras, garçons e
+                pedreiros desembarcam na zona sul todas as manhãs. A cidade está
+                planejada para que a zona norte “alimente” os bairros ricos da
+                zona sul. Enquanto os ônibus que seguem no sentido sul circulam
+                lotados, os que seguem no sentido norte ficam vazios.
             </p>
         </div>
-        <div class="split-right">
-            <p>
-                Este exercício é conduzido através dos serviços do Google Cloud.
-                Para conectar sua conta do Google e aprender suas funções
-                básicas, siga o
-                <a
-                    target="_blank"
-                    href="https://docs.dados.rio/tutoriais/como-acessar-dados/"
-                    >tutorial</a
-                >. Caso contrário, use preferencialmente
-                <a
-                    target="_blank"
-                    href="https://docs.dados.rio/tutoriais/como-acessar-dados/#acessando-dados-via-python"
-                    >Python</a
-                >
-                ou
-                <a
-                    target="_blank"
-                    href="https://docs.dados.rio/tutoriais/como-acessar-dados/#acessando-dados-via-r"
-                    >R</a
-                >.
-            </p>
+        <div class="refer-decode">
+            <h4>Banco de dados utilizado nesta decodificação</h4>
+            <ul>
+                <li>
+                    <a
+                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_hora&page=table"
+                        target="_blank"
+                        >Tabela de contagem do número de passageiros por hora.
+                        Agrega valores da tabela de transações por: data, hora,
+                        modo, consorcio, operadora, servico, sentido e
+                        tipo_transacao</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_tile_hora&page=table"
+                        target="_blank"
+                        >Tabela de contagem do número de passageiros por hora.
+                        Agrega valores das tabelas transacao e transacao_riocard
+                        por: data, hora, modo, consorcio, operadora, servico,
+                        sentido, tipo_transacao e tile_id</a
+                    >
+                </li>
+            </ul>
         </div>
     </div>
 
-    <!-- CODE BLOCK -->
+    <div class="content-decode">
+        <div class="split-cont">
+            <div class="split-left">
+                <p>
+                    Os dados sobre os passageiros estão disponíveis em um banco
+                    de dados disponibilizado pela Secretaria Municipal de
+                    Transportes chamado <a
+                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=gps_validador&page=table"
+                        target="_blank"
+                        >Tabela de contagem do número de passageiros por hora</a
+                    >.<br />Para acessar o número de passageiros por hora
+                    embarcados no 474 em ambos os sentidos, entre 17 e 21 de
+                    fevereiro de 2025, uma semana comun de trabalho antes do
+                    carnaval e no meio de uma onda de calor, é necessário
+                    executar a seguinte busca:
+                </p>
+            </div>
+            <div class="split-right">
+                <p>
+                    Este exercício é conduzido através dos serviços do Google
+                    Cloud. Para conectar sua conta do Google e aprender suas
+                    funções básicas, siga o
+                    <a
+                        target="_blank"
+                        href="https://docs.dados.rio/tutoriais/como-acessar-dados/"
+                        >tutorial</a
+                    >. Caso contrário, use preferencialmente
+                    <a
+                        target="_blank"
+                        href="https://docs.dados.rio/tutoriais/como-acessar-dados/#acessando-dados-via-python"
+                        >Python</a
+                    >
+                    ou
+                    <a
+                        target="_blank"
+                        href="https://docs.dados.rio/tutoriais/como-acessar-dados/#acessando-dados-via-r"
+                        >R</a
+                    >.
+                </p>
+            </div>
+        </div>
 
-    <pre><code class="language-sql">
+        <!-- CODE BLOCK -->
+
+        <pre><code class="language-sql">
 -- Selecionar as colunas data e hora e criar uma coluna que represente a soma da quantidade de passageiros retirada da coluna “quantidade_passageiros” ( essa coluna deve ser chamada de “total_passageiros”)
 -- no banco de dados (`rj-smtr.br_rj_riodejaneiro_bilhetagem.passageiros_hora`) 
 -- que atendem às condições: entre duas datas (BETWEEN DATE) e 
@@ -162,68 +162,72 @@ ORDER BY data, hora
 
     </code></pre>
 
-    <div class="split-cont" style="grid-template-columns: 1fr 1fr !important;">
-        <div class="split-left">
-            <p>
-                Total de passageiros embarcados no 474 entre 17 e 21 de
-                fevereiro de 2025, sentido Copacabana
-            </p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Data</th>
-                        <th>Hora</th>
-                        <th>Total de passageiros</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {#each jacare_semana as row}
-                        <tr>
-                            <td>{row.data}</td>
-                            <td>{row.hora}</td>
-                            <td>{row.total_passageiros}</td>
-                        </tr>
-                    {/each}
-                </tbody>
-            </table>
-        </div>
         <div
-            class="split-right"
-            style="background: none !important; color:black; padding:0; display:block"
+            class="split-cont"
+            style="grid-template-columns: 1fr 1fr !important;"
         >
-            <p>
-                Total de passageiros embarcados no 474 entre 17 e 21 de
-                fevereiro de 2025, sentido Jacaré
-            </p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Data</th>
-                        <th>Hora</th>
-                        <th>Total de passageiros</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {#each jacare_semana_volta as row}
+            <div class="split-left">
+                <p>
+                    Total de passageiros embarcados no 474 entre 17 e 21 de
+                    fevereiro de 2025, sentido Copacabana
+                </p>
+                <table>
+                    <thead>
                         <tr>
-                            <td>{row.data}</td>
-                            <td>{row.hora}</td>
-                            <td>{row.total_passageiros}</td>
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th>Total de passageiros</th>
                         </tr>
-                    {/each}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {#each jacare_semana as row}
+                            <tr>
+                                <td>{row.data}</td>
+                                <td>{row.hora}</td>
+                                <td>{row.total_passageiros}</td>
+                            </tr>
+                        {/each}
+                    </tbody>
+                </table>
+            </div>
+            <div
+                class="split-right"
+                style="background: none !important; color:black; padding:0; display:block"
+            >
+                <p>
+                    Total de passageiros embarcados no 474 entre 17 e 21 de
+                    fevereiro de 2025, sentido Jacaré
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th>Total de passageiros</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {#each jacare_semana_volta as row}
+                            <tr>
+                                <td>{row.data}</td>
+                                <td>{row.hora}</td>
+                                <td>{row.total_passageiros}</td>
+                            </tr>
+                        {/each}
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
 
-    <p>
-        Enquanto desde cedo os moradores da zona norte embarcam nos ônibus para
-        atravessar o túnel de Santa Bárbara, a zona sul ainda dorme. Ao calcular
-        a diferença entre a média de passageiros nos dois sentidos (por exemplo,
-        no intervalo horário das 4 às 12), a diferença é gritante:
-    </p>
+        <p>
+            Enquanto desde cedo os moradores da zona norte embarcam nos ônibus
+            para atravessar o túnel de Santa Bárbara, a zona sul ainda dorme. Ao
+            calcular a diferença entre a média de passageiros nos dois sentidos
+            (por exemplo, no intervalo horário das 4 às 12), a diferença é
+            gritante:
+        </p>
 
-    <pre><code class="language-sql">
+        <pre><code class="language-sql">
 
 WITH por_dia AS (
   SELECT
@@ -246,132 +250,134 @@ ORDER BY hora
 
     </code></pre>
 
-    <div class="split-cont" style="grid-template-columns: 1fr 1fr !important;">
-        <div class="split-left">
-            <p>
-                Media de passageiros embarcados no 474 entre 17 e 21 de
-                fevereiro de 2025, intervalo horário das 4 às 12, sentido
-                Copacabana
-            </p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hora</th>
-                        <th>Madia de passageiros</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {#each AVG_jacare_semana as row}
-                        <tr>
-                            <td>{row.hora}</td>
-                            <td>{row.media_passageiros}</td>
-                        </tr>
-                    {/each}
-                </tbody>
-            </table>
-        </div>
         <div
-            class="split-right"
-            style="background: none !important; color:black; padding:0; display:block"
+            class="split-cont"
+            style="grid-template-columns: 1fr 1fr !important;"
         >
-            <p>
-                Media de passageiros embarcados no 474 entre 17 e 21 de
-                fevereiro de 2025, intervalo horário das 4 às 12, sentido Jacaré
-            </p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hora</th>
-                        <th>Media de passageiros</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {#each AVG_jacare_semana_volta as row}
+            <div class="split-left">
+                <p>
+                    Media de passageiros embarcados no 474 entre 17 e 21 de
+                    fevereiro de 2025, intervalo horário das 4 às 12, sentido
+                    Copacabana
+                </p>
+                <table>
+                    <thead>
                         <tr>
-                            <td>{row.hora}</td>
-                            <td>{row.media_passageiros}</td>
+                            <th>Hora</th>
+                            <th>Madia de passageiros</th>
                         </tr>
-                    {/each}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {#each AVG_jacare_semana as row}
+                            <tr>
+                                <td>{row.hora}</td>
+                                <td>{row.media_passageiros}</td>
+                            </tr>
+                        {/each}
+                    </tbody>
+                </table>
+            </div>
+            <div
+                class="split-right"
+                style="background: none !important; color:black; padding:0; display:block"
+            >
+                <p>
+                    Media de passageiros embarcados no 474 entre 17 e 21 de
+                    fevereiro de 2025, intervalo horário das 4 às 12, sentido
+                    Jacaré
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Media de passageiros</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {#each AVG_jacare_semana_volta as row}
+                            <tr>
+                                <td>{row.hora}</td>
+                                <td>{row.media_passageiros}</td>
+                            </tr>
+                        {/each}
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
 
-    <p>
-        Esses dados podem ser ainda mais específicos, identificando quantas
-        pessoas embarcam no 474 em determinados pontos. Isso é possível através
-        de uma análise espacial, utilizando o sistema de referência
-        disponibilizado pela Secretaria Municipal de Transportes, que segmentou
-        a cidade numa malha hexagonal, onde cada hexágono possui um
-        identificador.
-    </p>
+        <p>
+            Esses dados podem ser ainda mais específicos, identificando quantas
+            pessoas embarcam no 474 em determinados pontos. Isso é possível
+            através de uma análise espacial, utilizando o sistema de referência
+            disponibilizado pela Secretaria Municipal de Transportes, que
+            segmentou a cidade numa malha hexagonal, onde cada hexágono possui
+            um identificador.
+        </p>
 
-    <div class="svg-wrapper" style:width style:height>
-        <div
-            class="svg-container"
-            bind:this={svgContainer}
-            style="border:1px solid #ccc; overflow:hidden; width:100%; height:100%;"
-        ></div>
+        <div class="svg-wrapper" style:width style:height>
+            <div
+                class="svg-container"
+                bind:this={svgContainer}
+                style="border:1px solid #ccc; overflow:hidden; width:100%; height:100%;"
+            ></div>
 
-        <div class="controls">
-            <button on:click={zoomIn}>+</button>
-            <button on:click={zoomOut}>–</button>
-            <button on:click={reset}>Reset</button>
+            <div class="controls">
+                <button on:click={zoomIn}>+</button>
+                <button on:click={zoomOut}>–</button>
+                <button on:click={reset}>Reset</button>
+            </div>
         </div>
-    </div>
 
-    <div class="split-cont">
-        <div class="split-left">
-            <p>
-                O primeiro passo é identificar em qual hexágono os pontos estão
-                localizados. Por exemplo, os quatro primeiros: Ponto final:
-                Jacaré :: Álvaro Seixas (R. Álvaro Seixas, 150), Largo do Jacaré
-                (Largo do Jacaré), Viúva Ortigão (R. Dois de Maio, 624),
-                Baronesa do Engenho Novo (R. Dois de Maio, 349), na malha
-                hexagonal disponível no banco de dados chamado <a
-                    href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_geo&t=h3_res9&page=table"
-                    target="_blank">h3_res9</a
-                >
-                , estão localizados no hexágono identificado como "89a8a06113bffff".
-                <br /><br />Tendo esse identificador, é possível determinar o
-                número de passageiros embarcados no 474 nesses pontos,
-                consultando o banco de dados chamado
-                <a
-                    href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_tile_hora&page=table"
-                    target="_blank"
-                    >Tabela de contagem do número de passageiros por hora.
-                    Agrega valores das tabelas transacao e transacao_riocard
-                    por: data, hora, modo, consorcio, operadora, servico,
-                    sentido, tipo_transacao e tile_id</a
-                >, executando a seguinte busca:
-            </p>
+        <div class="split-cont">
+            <div class="split-left">
+                <p>
+                    O primeiro passo é identificar em qual hexágono os pontos
+                    estão localizados. Por exemplo, a parada inicial (Ponto
+                    final: Jacaré :: Álvaro Seixas - R. Álvaro Seixas, 150), na
+                    malha hexagonal disponível no banco de dados chamado <a
+                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_geo&t=h3_res9&page=table"
+                        target="_blank">h3_res9</a
+                    >
+                    , está localizado no hexágono identificado como "89a8a06113bffff".
+                    <br /><br />Tendo esse identificador, é possível determinar
+                    o número de passageiros embarcados no 474 nesse ponto,
+                    consultando o banco de dados chamado
+                    <a
+                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_tile_hora&page=table"
+                        target="_blank"
+                        >Tabela de contagem do número de passageiros por hora.
+                        Agrega valores das tabelas transacao e transacao_riocard
+                        por: data, hora, modo, consorcio, operadora, servico,
+                        sentido, tipo_transacao e tile_id</a
+                    >, executando a seguinte busca:
+                </p>
+            </div>
+            <div class="split-right">
+                <p>
+                    Este exercício é conduzido através dos serviços do Google
+                    Cloud. Para conectar sua conta do Google e aprender suas
+                    funções básicas, siga o
+                    <a
+                        target="_blank"
+                        href="https://docs.dados.rio/tutoriais/como-acessar-dados/"
+                        >tutorial</a
+                    >. Caso contrário, use preferencialmente
+                    <a
+                        target="_blank"
+                        href="https://docs.dados.rio/tutoriais/como-acessar-dados/#acessando-dados-via-python"
+                        >Python</a
+                    >
+                    ou
+                    <a
+                        target="_blank"
+                        href="https://docs.dados.rio/tutoriais/como-acessar-dados/#acessando-dados-via-r"
+                        >R</a
+                    >.
+                </p>
+            </div>
         </div>
-        <div class="split-right">
-            <p>
-                Este exercício é conduzido através dos serviços do Google Cloud.
-                Para conectar sua conta do Google e aprender suas funções
-                básicas, siga o
-                <a
-                    target="_blank"
-                    href="https://docs.dados.rio/tutoriais/como-acessar-dados/"
-                    >tutorial</a
-                >. Caso contrário, use preferencialmente
-                <a
-                    target="_blank"
-                    href="https://docs.dados.rio/tutoriais/como-acessar-dados/#acessando-dados-via-python"
-                    >Python</a
-                >
-                ou
-                <a
-                    target="_blank"
-                    href="https://docs.dados.rio/tutoriais/como-acessar-dados/#acessando-dados-via-r"
-                    >R</a
-                >.
-            </p>
-        </div>
-    </div>
 
-    <pre><code class="language-sql">
+        <pre><code class="language-sql">
 -- Selecionar as colunas data e hora e criar uma coluna que represente a soma da quantidade de passageiros retirada da coluna “quantidade_passageiros” ( essa coluna deve ser chamada de “total_passageiros”)
 -- no banco de dados (`rj-smtr.br_rj_riodejaneiro_bilhetagem.passageiros_hora`) 
 -- que atendem às condições: data (data ='2025-02-21') e 
@@ -391,31 +397,30 @@ ORDER BY data, hora
 
     </code></pre>
 
-    <p>
-        Total de passageiros embarcados no 474 em 21 de fevereiro de 2025,
-        sentido Copacabana, nos quatro primeiros pontos: Ponto final Jacaré :: Álvaro
-        Seixas (R. Álvaro Seixas, 150), Largo do Jacaré (Largo do Jacaré), Viúva
-        Ortigão (R. Dois de Maio, 624), Baronesa do Engenho Novo (R. Dois de
-        Maio, 349)
-    </p>
-    <table>
-        <thead>
-            <tr>
-                <th>Data</th>
-                <th>Hora</th>
-                <th>Total de passageiros</th>
-            </tr>
-        </thead>
-        <tbody>
-            {#each ponto_final as row}
+        <p>
+            Total de passageiros embarcados no 474 em 21 de fevereiro de 2025,
+            sentido Copacabana, na parada inicial: Ponto final Jacaré :: Álvaro
+            Seixas (R. Álvaro Seixas, 150)
+        </p>
+        <table>
+            <thead>
                 <tr>
-                    <td>{row.data}</td>
-                    <td>{row.hora}</td>
-                    <td>{row.total_passageiros}</td>
+                    <th>Data</th>
+                    <th>Hora</th>
+                    <th>Total de passageiros</th>
                 </tr>
-            {/each}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                {#each ponto_final as row}
+                    <tr>
+                        <td>{row.data}</td>
+                        <td>{row.hora}</td>
+                        <td>{row.total_passageiros}</td>
+                    </tr>
+                {/each}
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <style>
@@ -540,5 +545,23 @@ ORDER BY data, hora
     td {
         padding: 0.6rem;
         text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .content-decode {
+            padding: 0.8rem;
+        }
+        .intro-decode {
+            display: inline-block;
+            padding: 1rem;
+        }
+        .split-cont {
+            display: inline-block;
+            max-width: 90%;
+        }
+        table {
+            table-layout: fixed !important;
+            width: 90%;
+        }
     }
 </style>

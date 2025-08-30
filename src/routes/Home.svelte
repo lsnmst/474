@@ -99,4 +99,10 @@
         padding: 0.25rem 0.5rem;
         cursor: pointer;
     }
+
+    @media (max-width: 768px) {
+        .cover{
+            display: block;
+        }
+    }
 </style>

@@ -369,4 +369,22 @@ AND id_veiculo = "A29064"
     .controls button:hover {
         background: #c743c7;
     }
+
+    @media (max-width: 768px) {
+        .content-decode {
+            padding: 0.8rem;
+        }
+        .intro-decode {
+            display: inline-block;
+            padding: 1rem;
+        }
+        .split-cont {
+            display: inline-block;
+            max-width: 90%;
+        }
+        table {
+            table-layout: fixed !important;
+            width: 90%;
+        }
+    }
 </style>
