@@ -10,6 +10,9 @@
   import Texto4 from "./routes/Texto4.svelte";
   import Mapa1 from "./routes/Mapa1.svelte";
   import Mapa2 from "./routes/Mapa2.svelte";
+  import Mapa3 from "./routes/Mapa3.svelte";
+  import Mapa4 from "./routes/Mapa4.svelte";
+  import Mapa5 from "./routes/Mapa5.svelte";
   import Dados from "./routes/Dados.svelte";
   import Decode1 from "./routes/Decode1.svelte";
   import Decode2 from "./routes/Decode2.svelte";
@@ -29,6 +32,9 @@
     "/textos/texto4": Texto4,
     "/mapas/mapa1": Mapa1,
     "/mapas/mapa2": Mapa2,
+    "/mapas/mapa3": Mapa3,
+    "/mapas/mapa4": Mapa4,
+    "/mapas/mapa5": Mapa5,
     "/dados": Dados,
     "/decode/decode1": Decode1,
     "/decode/decode2": Decode2,
@@ -336,7 +342,7 @@
     left: 90%;
     transform: translateX(-90%);
     font-size: 2rem;
-    color: #555;
+    color: rgb(42, 10, 92) !important;
     background: #d2fb85;
     padding: 0.2rem 0.6rem;
     display: none;
@@ -380,7 +386,7 @@
   }
 
   a {
-    color: #333;
+    color: rgb(42, 10, 92) !important;
     text-decoration: none;
   }
 
@@ -406,7 +412,7 @@
     top: 1rem;
     right: 1rem;
     border: none;
-    color: black;
+    color: rgb(42, 10, 92) !important;
     background: none;
     font-size: 1.8rem;
     font-weight: bold;
@@ -478,7 +484,7 @@
       position: fixed;
       bottom: 1rem;
       right: 1rem;
-      color: #333;
+      color: rgb(42, 10, 92) !important;
       background: #d2fb85;
       border: 1px solid #999;
       padding: 0.6rem 1rem;

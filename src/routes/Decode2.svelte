@@ -143,7 +143,7 @@
         <!-- CODE BLOCK -->
 
         <pre><code class="language-sql">
--- Selecionar as colunas data e hora e criar uma coluna que represente a soma da quantidade de passageiros retirada da coluna “quantidade_passageiros” ( essa coluna deve ser chamada de “total_passageiros”)
+-- Lógica: selecionar as colunas data e hora e criar uma coluna que represente a soma da quantidade de passageiros retirada da coluna “quantidade_passageiros” ( essa coluna deve ser chamada de “total_passageiros”)
 -- no banco de dados (`rj-smtr.br_rj_riodejaneiro_bilhetagem.passageiros_hora`) 
 -- que atendem às condições: entre duas datas (BETWEEN DATE) e 
 -- o serviço é o 474 (servico_jae ="474") e
@@ -378,7 +378,7 @@ ORDER BY hora
         </div>
 
         <pre><code class="language-sql">
--- Selecionar as colunas data e hora e criar uma coluna que represente a soma da quantidade de passageiros retirada da coluna “quantidade_passageiros” ( essa coluna deve ser chamada de “total_passageiros”)
+-- Lógica: selecionar as colunas data e hora e criar uma coluna que represente a soma da quantidade de passageiros retirada da coluna “quantidade_passageiros” ( essa coluna deve ser chamada de “total_passageiros”)
 -- no banco de dados (`rj-smtr.br_rj_riodejaneiro_bilhetagem.passageiros_hora`) 
 -- que atendem às condições: data (data ='2025-02-21') e 
 -- o serviço é o 474 (servico_jae ="474") e
@@ -430,6 +430,7 @@ ORDER BY data, hora
         padding: 3rem;
         margin-bottom: 2rem;
         background: #d2fb85;
+        align-items: center;
     }
 
     .split-cont {

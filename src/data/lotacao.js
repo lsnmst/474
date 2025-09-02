@@ -1,0 +1,416 @@
+export const lotacao = [{
+  "data": "2024-12-04",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "538"
+}, {
+  "data": "2025-05-30",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "527"
+}, {
+  "data": "2025-05-30",
+  "hora": "16",
+  "sentido": "0",
+  "quantidade_passageiros": "564"
+}, {
+  "data": "2025-01-28",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "552"
+}, {
+  "data": "2025-04-10",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "536"
+}, {
+  "data": "2025-01-15",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "538"
+}, {
+  "data": "2025-03-17",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "549"
+}, {
+  "data": "2024-12-02",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "609"
+}, {
+  "data": "2025-01-21",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "515"
+}, {
+  "data": "2025-03-12",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "562"
+}, {
+  "data": "2025-02-06",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "551"
+}, {
+  "data": "2025-02-06",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "645"
+}, {
+  "data": "2025-05-15",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "535"
+}, {
+  "data": "2025-03-19",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "602"
+}, {
+  "data": "2025-01-16",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "536"
+}, {
+  "data": "2025-03-21",
+  "hora": "17",
+  "sentido": "0",
+  "quantidade_passageiros": "530"
+}, {
+  "data": "2024-11-11",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "524"
+}, {
+  "data": "2024-11-28",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "504"
+}, {
+  "data": "2024-11-26",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "513"
+}, {
+  "data": "2025-02-12",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "539"
+}, {
+  "data": "2025-02-12",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "554"
+}, {
+  "data": "2025-02-12",
+  "hora": "8",
+  "sentido": "0",
+  "quantidade_passageiros": "507"
+}, {
+  "data": "2024-12-03",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "554"
+}, {
+  "data": "2025-04-08",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "518"
+}, {
+  "data": "2025-04-08",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "510"
+}, {
+  "data": "2025-02-24",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "509"
+}, {
+  "data": "2025-02-24",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "571"
+}, {
+  "data": "2025-04-02",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "581"
+}, {
+  "data": "2025-04-02",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "508"
+}, {
+  "data": "2024-12-17",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "503"
+}, {
+  "data": "2025-01-17",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "544"
+}, {
+  "data": "2025-02-20",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "508"
+}, {
+  "data": "2025-02-20",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "564"
+}, {
+  "data": "2025-01-27",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "510"
+}, {
+  "data": "2024-12-06",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "529"
+}, {
+  "data": "2025-05-23",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "525"
+}, {
+  "data": "2024-11-13",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "501"
+}, {
+  "data": "2025-02-11",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "518"
+}, {
+  "data": "2025-02-11",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "615"
+}, {
+  "data": "2025-01-22",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "572"
+}, {
+  "data": "2024-11-29",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "512"
+}, {
+  "data": "2025-03-06",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "515"
+}, {
+  "data": "2025-02-14",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "523"
+}, {
+  "data": "2025-02-14",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "635"
+}, {
+  "data": "2025-05-22",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "522"
+}, {
+  "data": "2025-05-22",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "507"
+}, {
+  "data": "2024-11-08",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "543"
+}, {
+  "data": "2025-02-17",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "597"
+}, {
+  "data": "2025-04-07",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "504"
+}, {
+  "data": "2025-05-27",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "583"
+}, {
+  "data": "2025-05-16",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "512"
+}, {
+  "data": "2025-05-16",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "502"
+}, {
+  "data": "2025-02-18",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "506"
+}, {
+  "data": "2025-02-18",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "579"
+}, {
+  "data": "2025-03-18",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "550"
+}, {
+  "data": "2025-03-18",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "505"
+}, {
+  "data": "2025-04-09",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "520"
+}, {
+  "data": "2025-02-13",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "634"
+}, {
+  "data": "2025-02-13",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "549"
+}, {
+  "data": "2025-02-04",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "526"
+}, {
+  "data": "2025-02-04",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "541"
+}, {
+  "data": "2025-05-21",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "513"
+}, {
+  "data": "2025-05-21",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "539"
+}, {
+  "data": "2025-04-16",
+  "hora": "16",
+  "sentido": "0",
+  "quantidade_passageiros": "521"
+}, {
+  "data": "2025-03-11",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "572"
+}, {
+  "data": "2025-03-13",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "519"
+}, {
+  "data": "2025-02-10",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "601"
+}, {
+  "data": "2025-02-10",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "588"
+}, {
+  "data": "2025-02-27",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "568"
+}, {
+  "data": "2025-02-27",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "525"
+}, {
+  "data": "2025-05-14",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "586"
+}, {
+  "data": "2025-02-25",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "551"
+}, {
+  "data": "2025-01-30",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "599"
+}, {
+  "data": "2025-02-19",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "624"
+}, {
+  "data": "2024-10-06",
+  "hora": "11",
+  "sentido": "0",
+  "quantidade_passageiros": "780"
+}, {
+  "data": "2024-10-06",
+  "hora": "12",
+  "sentido": "0",
+  "quantidade_passageiros": "604"
+}, {
+  "data": "2024-10-06",
+  "hora": "9",
+  "sentido": "0",
+  "quantidade_passageiros": "662"
+}, {
+  "data": "2024-10-06",
+  "hora": "13",
+  "sentido": "0",
+  "quantidade_passageiros": "542"
+}, {
+  "data": "2024-10-06",
+  "hora": "10",
+  "sentido": "0",
+  "quantidade_passageiros": "593"
+}, {
+  "data": "2025-04-14",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "510"
+}, {
+  "data": "2025-01-31",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "506"
+}, {
+  "data": "2024-11-07",
+  "hora": "7",
+  "sentido": "0",
+  "quantidade_passageiros": "775"
+}, {
+  "data": "2025-04-03",
+  "hora": "6",
+  "sentido": "0",
+  "quantidade_passageiros": "523"
+}]

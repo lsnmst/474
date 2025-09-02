@@ -364,6 +364,7 @@ LINESTRING(-43.68531 -22.91527, -43.68566 -22.91496,
         padding: 3rem;
         margin-bottom: 2rem;
         background: #d2fb85;
+        align-items: center;
     }
 
     .split-cont {

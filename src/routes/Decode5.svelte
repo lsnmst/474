@@ -254,6 +254,7 @@ AND id_veiculo = "A29064"
         padding: 3rem;
         margin-bottom: 2rem;
         background: #d2fb85;
+        align-items: center;
     }
 
     .split-cont {

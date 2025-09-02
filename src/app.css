@@ -43,18 +43,23 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: #f3f3e4;
+  color: rgb(42, 10, 92) !important;
   cursor: crosshair;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: rgb(42, 10, 92) !important;
+
 }
 
 h4 {
   font-family: "Karla-Cedille", sans-serif;
   font-weight: bold;
   text-decoration: underline;
+  color: rgb(42, 10, 92) !important;
+
 }
 
 .card {

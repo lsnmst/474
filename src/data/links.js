@@ -14,6 +14,22 @@ export const mapas = [
         link: "/mapas/mapa2",
         decodeRefs: ["/decode/decode5"]
     },
+    {
+        title: " Em quais direções a cidade se deslocou em um domingo de eleições municipais e tarifa zero",
+        link: "/mapas/mapa3",
+        decodeRefs: ["/decode/decode3"]
+    },
+    {
+        title: "Georreferenciamento das transações em dinheiro nas 10 linhas de ônibus onde o dinheiro foi mais utilizado como forma de pagamento no mês de agosto de 2025",
+        link: "/mapas/mapa4",
+        decodeRefs: ["/decode/decode6"]
+    },
+    {
+        title: "Celular robado",
+        link: "/mapas/mapa5",
+        decodeRefs: ["/decode/decode6"]
+    },
+
 ];
 
 export const dadosLinks = [
@@ -35,7 +51,7 @@ export const dadosLinks = [
     {
         title: "Tabela de contagem do número de passageiros por hora. Agrega valores da tabela de transações por: data, hora, modo, consorcio, operadora, servico, sentido e tipo_transacao",
         link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_hora&page=table",
-        decodeRefs: ["/decode/decode2"]
+        decodeRefs: ["/decode/decode2", "/decode/decode3"]
     },
     {
         title: "GTFS - Viagens para cada rota",
@@ -51,7 +67,8 @@ export const dadosLinks = [
         title:
             "Tabela com informações da Jaé sobre as transações realizadas no sistema de transporte municipal",
         link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=transacao&page=table",
-        decodeRefs: []
+        decodeRefs: ["/decode/decode6"]
+
     },
     {
         title:
@@ -64,6 +81,11 @@ export const dadosLinks = [
         link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_tile_hora&page=table",
         decodeRefs: ["/decode/decode2"]
     },
+    {
+        title: "Série histórica mensal por área de Circunscrição Integrada de Segurança Pública (CISP)",
+        link: "https://dadosabertos.rj.gov.br/dataset/isp-estatisticas-de-seguranca-publica/resource/3e553e0b-ff90-48ad-9584-90df6baeea6c",
+        decodeRefs: ["/decode/decode6"]
+    },
 
 ];
 
@@ -73,7 +95,7 @@ export const decode = [
         title: "Indo 'alimentar' os bairros ricos da zona sul",
         link: "/decode/decode2",
     },
-    { title: "Superlotação", link: "/decode/decode3" },
+    { title: "Superlotação (e um experimento com tarifa zero)", link: "/decode/decode3" },
     { title: "Dando calote voltando da praia", link: "/decode/decode4" },
     { title: "Uma questão de cor", link: "/decode/decode5" },
     { title: "Uma nova forma de exclusão a caminho?", link: "/decode/decode6" },

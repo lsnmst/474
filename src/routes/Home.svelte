@@ -23,10 +23,14 @@
             <a href="" target="_blank">Gabriel Weber</a><br />
             15 - 17 de setembro de 2025, Sala do Futuro, FAU/UFRJ,<br />
             Organizada por
+            <a href="https://ippur.ufrj.br/" target="_blank"
+                >CiDMobi - IPPUR/UFRJ</a
+            >
+            e
             <a
                 href="https://www.observatoriodasmetropoles.net.br/"
                 target="_blank">Observatório das Metrópoles</a
-            > e CiDMobi - IPPUR/UFRJ
+            >
         </p>
     </div>
 
@@ -101,7 +105,7 @@
     }
 
     @media (max-width: 768px) {
-        .cover{
+        .cover {
             display: block;
         }
     }
