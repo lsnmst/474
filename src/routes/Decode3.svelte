@@ -61,14 +61,22 @@
     <div class="intro-decode">
         <div class="pres-decode">
             <h1>Superlotação<br />(e um experimento com tarifa zero)</h1>
-            <p>TEXT</p>
+            <p>
+                Ao publicar mensagens mecanicistas e reducionistas tipicamente
+                neoliberais, como “aumentar a eficiência do sistema” e “reduzir
+                custos operacionais ociosos” por meio do monitoramento com
+                dados, a Prefeitura do Rio de Janeiro prometeu acabar com a
+                superlotação dos ônibus nos horários de pico. Esquecendo que a
+                superlotação é uma dinâmica social e não um simples problema
+                algorítmico.
+            </p>
         </div>
         <div class="refer-decode">
             <h4>Banco de dados utilizado nesta decodificação</h4>
             <ul>
                 <li>
                     <a
-                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_hora&page=table"
+                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=bilhetagem&t=passageiro_hora&page=table"
                         target="_blank"
                         >Tabela de contagem do número de passageiros por hora.
                         Agrega valores da tabela de transações por: data, hora,
@@ -143,7 +151,7 @@
                     Os dados sobre os passageiros estão disponíveis em um banco
                     de dados disponibilizado pela Secretaria Municipal de
                     Transportes chamado <a
-                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=gps_validador&page=table"
+                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=bilhetagem&t=passageiro_hora&page=table"
                         target="_blank"
                         >Tabela de contagem do número de passageiros por hora</a
                     >.<br />Para este cálculo, considerando a capacidade máxima
@@ -182,13 +190,13 @@
 
         <pre><code class="language-sql">
 -- Lógica: selecionar as colunas data, hora e quantidade de passageiros 
--- no banco de dados (`rj-smtr.br_rj_riodejaneiro_bilhetagem.passageiros_hora`) 
+-- no banco de dados (`rj-smtr.bilhetagem.passageiro_hora`) 
 -- que atendem às condições: entre duas datas (BETWEEN DATE) e 
 -- o serviço é o 474 (servico_jae ="474") e
 -- a quantidade de passageiros superior a 500 (quantidade_passageiros > 500).
 
 SELECT data, hora, sentido, quantidade_passageiros 
-FROM `rj-smtr.br_rj_riodejaneiro_bilhetagem.passageiros_hora` 
+FROM `rj-smtr.bilhetagem.passageiro_hora` 
 WHERE `data` BETWEEN DATE('2024-06-01') AND DATE('2025-05-31')
 AND servico_jae = "474"  
 AND quantidade_passageiros > 500
@@ -311,7 +319,7 @@ WITH services AS (
     descricao_servico_jae,
     sentido,
     quantidade_passageiros
-  FROM `rj-smtr.br_rj_riodejaneiro_bilhetagem.passageiros_hora`
+  FROM `rj-smtr.bilhetagem.passageiro_hora`
   WHERE
     data = DATE("2024-10-06")
     AND quantidade_passageiros > 500

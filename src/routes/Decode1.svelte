@@ -29,7 +29,7 @@
             <ul>
                 <li>
                     <a
-                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=gps_validador&page=table"
+                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=monitoramento&t=gps_validador&page=table"
                         target="_blank"
                         >Tabela de posições de GPS de todos os validadores da
                         Jaé instalados, incluindo estado do equipamento,
@@ -87,7 +87,7 @@
                     Os dados de temperatura estão disponíveis em um banco de
                     dados disponibilizado pela Secretaria Municipal de
                     Transportes chamado <a
-                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=gps_validador&page=table"
+                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=monitoramento&t=gps_validador&page=table"
                         target="_blank"
                         >Tabela de posições de GPS de todos os validadores da
                         Jaé instalados, incluindo estado do equipamento,
@@ -287,7 +287,7 @@ LINESTRING(-43.68531 -22.91527, -43.68566 -22.91496,
             <div class="split-left">
                 <p>
                     É possível responder a essa pergunta consultando a <a
-                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=gps_validador&page=table"
+                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=monitoramento&t=gps_validador&page=table"
                         target="_blank"
                         >Tabela de posições de GPS de todos os validadores da
                         Jaé instalados, incluindo estado do equipamento,

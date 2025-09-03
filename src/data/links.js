@@ -25,7 +25,7 @@ export const mapas = [
         decodeRefs: ["/decode/decode6"]
     },
     {
-        title: "Celular robado",
+        title: "Estatísticas de roubos de celulares nas áreas atravessadas pela rota do 474",
         link: "/mapas/mapa5",
         decodeRefs: ["/decode/decode6"]
     },
@@ -40,8 +40,8 @@ export const dadosLinks = [
     },
     {
         title: "Tabela de posições de GPS de todos os validadores da Jaé instalados, incluindo estado do equipamento, serviço, sentido e veículo associado e temperatura do veículo.",
-        link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=gps_validador&page=table",
-        decodeRefs: ["/decode/decode1"]
+        link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=monitoramento&t=gps_validador&page=table",
+        decodeRefs: ["/decode/decode1", "/decode/decode7", "/decode/decode8"]
     },
     {
         title: "Tabela com os dados tratados de registros de GPS do SPPO, incluindo velocidade estimada, estado de movimento, parada em terminal ou garagem e interseção com o traçado da linha informada",
@@ -50,13 +50,18 @@ export const dadosLinks = [
     },
     {
         title: "Tabela de contagem do número de passageiros por hora. Agrega valores da tabela de transações por: data, hora, modo, consorcio, operadora, servico, sentido e tipo_transacao",
-        link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_hora&page=table",
+        link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=bilhetagem&t=passageiro_hora&page=table",
         decodeRefs: ["/decode/decode2", "/decode/decode3"]
     },
     {
         title: "GTFS - Viagens para cada rota",
         link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=gtfs&t=trips&page=table",
         decodeRefs: ["/decode/decode1"]
+    },
+    {
+        title: "Ocorrências disparadas pelo COR desde 2015",
+        link: "https://console.cloud.google.com/bigquery?p=datario&d=adm_cor_comando&t=ocorrencias&page=table",
+        decodeRefs: ["/decode/decode8"]
     },
     {
         title: "GTFS - Shapes em formatos geográficos para cada rota",
@@ -78,8 +83,23 @@ export const dadosLinks = [
     },
     {
         title: "Tabela de contagem do número de passageiros por hora. Agrega valores das tabelas transacao e transacao_riocard por: data, hora, modo, consorcio, operadora, servico, sentido, tipo_transacao e tile_id",
-        link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_tile_hora&page=table",
+        link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=bilhetagem&t=passageiro_tile_hora&page=table",
         decodeRefs: ["/decode/decode2"]
+    },
+    {
+        title: "Incidentes envolvendo violência armada",
+        link: "https://api.fogocruzado.org.br/search",
+        decodeRefs: ["/decode/decode7"]
+    },
+    {
+        title: "Chamados feitos ao 1746 desde março de 2011",
+        link: "https://console.cloud.google.com/bigquery?p=datario&d=adm_central_atendimento_1746&t=chamado&page=table",
+        decodeRefs: ["/decode/decode9"]
+    },
+    {
+        title: "Bairros da Cidade do Rio de Janeiro",
+        link: "https://console.cloud.google.com/bigquery?p=datario&d=dados_mestres&t=bairro&page=table",
+        decodeRefs: ["/decode/decode9"]
     },
     {
         title: "Série histórica mensal por área de Circunscrição Integrada de Segurança Pública (CISP)",
@@ -96,7 +116,7 @@ export const decode = [
         link: "/decode/decode2",
     },
     { title: "Superlotação (e um experimento com tarifa zero)", link: "/decode/decode3" },
-    { title: "Dando calote voltando da praia", link: "/decode/decode4" },
+    // { title: "Dando calote voltando da praia", link: "/decode/decode4" },
     { title: "Uma questão de cor", link: "/decode/decode5" },
     { title: "Uma nova forma de exclusão a caminho?", link: "/decode/decode6" },
     {

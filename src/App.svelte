@@ -17,7 +17,7 @@
   import Decode1 from "./routes/Decode1.svelte";
   import Decode2 from "./routes/Decode2.svelte";
   import Decode3 from "./routes/Decode3.svelte";
-  import Decode4 from "./routes/Decode4.svelte";
+  // import Decode4 from "./routes/Decode4.svelte";
   import Decode5 from "./routes/Decode5.svelte";
   import Decode6 from "./routes/Decode6.svelte";
   import Decode7 from "./routes/Decode7.svelte";
@@ -39,7 +39,7 @@
     "/decode/decode1": Decode1,
     "/decode/decode2": Decode2,
     "/decode/decode3": Decode3,
-    "/decode/decode4": Decode4,
+    // "/decode/decode4": Decode4,
     "/decode/decode5": Decode5,
     "/decode/decode6": Decode6,
     "/decode/decode7": Decode7,

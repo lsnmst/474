@@ -76,7 +76,7 @@
             <ul>
                 <li>
                     <a
-                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_hora&page=table"
+                        href="hhttps://console.cloud.google.com/bigquery?p=rj-smtr&d=bilhetagem&t=passageiro_hora&page=table"
                         target="_blank"
                         >Tabela de contagem do número de passageiros por hora.
                         Agrega valores da tabela de transações por: data, hora,
@@ -86,7 +86,7 @@
                 </li>
                 <li>
                     <a
-                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_tile_hora&page=table"
+                        href="https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1srj-smtr!2sbilhetagem!3spassageiro_tile_hora"
                         target="_blank"
                         >Tabela de contagem do número de passageiros por hora.
                         Agrega valores das tabelas transacao e transacao_riocard
@@ -105,7 +105,7 @@
                     Os dados sobre os passageiros estão disponíveis em um banco
                     de dados disponibilizado pela Secretaria Municipal de
                     Transportes chamado <a
-                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=gps_validador&page=table"
+                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=bilhetagem&t=passageiro_hora&page=table"
                         target="_blank"
                         >Tabela de contagem do número de passageiros por hora</a
                     >.<br />Para acessar o número de passageiros por hora
@@ -144,14 +144,14 @@
 
         <pre><code class="language-sql">
 -- Lógica: selecionar as colunas data e hora e criar uma coluna que represente a soma da quantidade de passageiros retirada da coluna “quantidade_passageiros” ( essa coluna deve ser chamada de “total_passageiros”)
--- no banco de dados (`rj-smtr.br_rj_riodejaneiro_bilhetagem.passageiros_hora`) 
+-- no banco de dados (`rj-smtr.bilhetagem.passageiro_hora`) 
 -- que atendem às condições: entre duas datas (BETWEEN DATE) e 
 -- o serviço é o 474 (servico_jae ="474") e
 -- a direção é de Jacaré para Copacabana (sentido = "0").
 -- Para que o resultado seja compreensível, ordene a tabela extraída por data e hora
 
 SELECT data, hora, SUM(quantidade_passageiros) AS total_passageiros 
-FROM `rj-smtr.br_rj_riodejaneiro_bilhetagem.passageiros_hora` 
+FROM `rj-smtr.bilhetagem.passageiro_hora` 
 WHERE data BETWEEN DATE('2025-02-17') AND DATE('2025-02-21') 
 AND servico_jae ="474" 
 AND sentido = "0"
@@ -192,7 +192,7 @@ ORDER BY data, hora
             </div>
             <div
                 class="split-right"
-                style="background: none !important; color:black; padding:0; display:block"
+                style="background: none !important; color:rgb(42, 10, 92); padding:0; display:block"
             >
                 <p>
                     Total de passageiros embarcados no 474 entre 17 e 21 de
@@ -234,7 +234,7 @@ WITH por_dia AS (
     data,
     hora,
     SUM(quantidade_passageiros) AS total_passageiros
-  FROM `rj-smtr.br_rj_riodejaneiro_bilhetagem.passageiros_hora`
+  FROM `rj-smtr.bilhetagem.passageiro_hora`
   WHERE data BETWEEN DATE('2025-02-17') AND DATE('2025-02-21')
     AND hora &gt; 4 AND hora &lt; 12
     AND servico_jae = "474"
@@ -279,7 +279,7 @@ ORDER BY hora
             </div>
             <div
                 class="split-right"
-                style="background: none !important; color:black; padding:0; display:block"
+                style="background: none !important; color:rgb(42, 10, 92); padding:0; display:block"
             >
                 <p>
                     Media de passageiros embarcados no 474 entre 17 e 21 de
@@ -343,7 +343,7 @@ ORDER BY hora
                     o número de passageiros embarcados no 474 nesse ponto,
                     consultando o banco de dados chamado
                     <a
-                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_bilhetagem&t=passageiros_tile_hora&page=table"
+                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=bilhetagem&t=passageiro_tile_hora&page=table"
                         target="_blank"
                         >Tabela de contagem do número de passageiros por hora.
                         Agrega valores das tabelas transacao e transacao_riocard
@@ -379,7 +379,7 @@ ORDER BY hora
 
         <pre><code class="language-sql">
 -- Lógica: selecionar as colunas data e hora e criar uma coluna que represente a soma da quantidade de passageiros retirada da coluna “quantidade_passageiros” ( essa coluna deve ser chamada de “total_passageiros”)
--- no banco de dados (`rj-smtr.br_rj_riodejaneiro_bilhetagem.passageiros_hora`) 
+-- no banco de dados (`rj-smtr.bilhetagem.passageiro_tile_hora`) 
 -- que atendem às condições: data (data ='2025-02-21') e 
 -- o serviço é o 474 (servico_jae ="474") e
 -- a direção é de Jacaré para Copacabana (sentido = "0") e
@@ -387,7 +387,7 @@ ORDER BY hora
 -- Para que o resultado seja compreensível, ordene a tabela extraída por data e hora
 
 SELECT data, hora, SUM(quantidade_passageiros) AS total_passageiros 
-FROM `rj-smtr.br_rj_riodejaneiro_bilhetagem.passageiros_tile_hora` 
+FROM `rj-smtr.bilhetagem.passageiro_tile_hora` 
 WHERE data ='2025-02-21' 
 AND servico_jae ="474" 
 AND sentido="0" 

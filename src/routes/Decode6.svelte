@@ -63,7 +63,12 @@
     <div class="intro-decode">
         <div class="pres-decode">
             <h1>Uma nova forma de exclusão a caminho?</h1>
-            <p>TEXT</p>
+            <p>
+                Imitando servilmente o modelo de transporte de outras cidades, a
+                Prefeitura do Rio de Janeiro pretende eliminar o dinheiro como
+                meio de pagamento para acessar os ônibus municipais até 2028. Os
+                dados corroboram essa escolha política?
+            </p>
         </div>
         <div class="refer-decode">
             <h4>Banco de dados utilizado nesta decodificação</h4>
@@ -81,8 +86,57 @@
     </div>
 
     <div class="content-decode">
-        <p></p>
+        <p>
+            Em 22 de julho de 2025, a Prefeitura do Rio de Janeiro publicou um
+            edital de consulta pública para a primeira fase da nova licitação do
+            sistema de ônibus da cidade. O <a
+                href="https://transportes.prefeitura.rio/wp-content/uploads/sites/31/2025/07/ANEXO-I.4-Especificacao-de-frota.pdf"
+                target="_blank"
+                >documento
+            </a> anexo ao edital com as especificações da frota sugere que os veículos
+            não estejam mais equipados para aceitar pagamentos em dinheiro. A cena
+            do motorista apertando o botão para liberar o ingresso na catraca vai
+            desaparecer e só o aparelho Jaé vai decidir quem pode entrar.
+        </p>
 
+        <p style="font-family: 'Roboto Mono'; font-size:0.8rem;">
+            – Esse é um momento importante, uma mudança institucional na
+            história da cidade do Rio. Nos dedicamos nesses primeiros seis meses
+            à implantação do Jaé e, a partir de hoje, iniciamos o processo que
+            irá proporcionar uma revolução no sistema de ônibus. O sofrimento
+            vai acabar. Não será do dia para a noite, mas eu quero reafirmar que
+            até o fim do mandato, em 2028, teremos esse sistema completamente
+            reformado como fizemos no BRT. A mudança será sentida gradualmente,
+            primeiro na Zona Oeste, mais especificamente em Campo Grande e em
+            Santa Cruz – afirmou Eduardo Paes.
+        </p>
+
+        <p>
+            Nos grupos do WhatsApp e nas páginas das redes sociais, alguns
+            usuários levantaram a questão com base em sua experiência como
+            passageiros:
+        </p>
+
+        <p style="font-family: 'Roboto Mono'; font-size:0.8rem;">
+            (josoe.dejesus.7) Quem acha ok certamente nunca ficou sem bateria na
+            volta do trabalho pra casa e sem o bilhete único. Dinheiro a gente
+            ainda consegue pedir emprestado e se virar, mas e quem tá sem
+            celular/carteira, quem foi roubado (muito comum)? Como vai voltar
+            pra casa? (fe1emdeus42) A realidade de quem usa com certeza é outra
+            !! Principalmente quando os cartões não passam, sem dizer
+            estudantes. Os passes sempre dão problemas. (rafael.monteiro93) Algo
+            difícil de acontecer é a extinção do dinheiro vivo, vindo do final
+            de mês, ausência de pontos de recargas em municípios e bairros. O
+            bilhete único só contempla 1 CPF..
+        </p>
+
+        <p style="margin-bottom: 10rem;">
+            Essa decodificação procura compreender quem paga em dinheiro e em
+            quais linhas as pessoas mais usam o dinheiro para ter acesso ao
+            ônibus, com o objetivo de avaliar se, de acordo com os dados, a
+            eliminação do dinheiro como método de pagamento pode resultar em uma
+            forma de exclusão.
+        </p>
         <div class="split-cont">
             <div class="split-left">
                 <p>
@@ -352,7 +406,6 @@ ORDER BY variacao_percentual DESC;
         </div>
 
         <SvgCelular src="/celular.svg" height="800px" width="100%" />
-
     </div>
 </div>
 

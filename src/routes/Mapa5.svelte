@@ -48,11 +48,13 @@
 </script>
 
 <h3>
-    Roubo celular Julho
+    Estatísticas de roubos de celulares em julho de 2025 nas áreas atravessadas
+    pela rota do 474
 </h3>
 
 <p>
-    Este mapa mostra roubo celular julho.
+    Este mapa apresenta as estatísticas por área de Circunscrição Integrada de
+    Segurança Pública (CISP) de roubos de celulares no mês de julho de 2025.
 </p>
 <div class="svg-wrapper" style:width style:height>
     <div

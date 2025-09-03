@@ -72,7 +72,10 @@
 <div class="intro-decode">
     <div class="pres-decode">
         <h1>Uma questão de cor</h1>
-        <p>TEXT</p>
+        <p>
+            Adivinha quem a polícia procura primeiro quando entra no ônibus à
+            procura de suspeitos?
+        </p>
     </div>
     <div class="refer-decode">
         <h4>Banco de dados utilizado nesta decodificação</h4>
