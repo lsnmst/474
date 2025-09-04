@@ -13,6 +13,7 @@
   import Mapa3 from "./routes/Mapa3.svelte";
   import Mapa4 from "./routes/Mapa4.svelte";
   import Mapa5 from "./routes/Mapa5.svelte";
+  import Mapa6 from "./routes/Mapa6.svelte";
   import Dados from "./routes/Dados.svelte";
   import Decode1 from "./routes/Decode1.svelte";
   import Decode2 from "./routes/Decode2.svelte";
@@ -35,6 +36,7 @@
     "/mapas/mapa3": Mapa3,
     "/mapas/mapa4": Mapa4,
     "/mapas/mapa5": Mapa5,
+    "/mapas/mapa6": Mapa6,
     "/dados": Dados,
     "/decode/decode1": Decode1,
     "/decode/decode2": Decode2,
@@ -82,32 +84,58 @@
     return decode.filter((d) => refs.includes(d.link));
   }
 
-  let showScrollHint = false;
+  let showScrollHintDados = false;
+  let showScrollHintMapas = false;
 
   onMount(() => {
-    function checkOverflow() {
-      if (dadosColumn) {
-        const hasOverflow = dadosColumn.scrollHeight > dadosColumn.clientHeight;
-        const atBottom =
-          dadosColumn.scrollTop + dadosColumn.clientHeight >=
-          dadosColumn.scrollHeight - 2;
+    function makeScrollChecker(el, setShow) {
+      return function checkOverflow() {
+        if (el) {
+          const hasOverflow = el.scrollHeight > el.clientHeight;
+          const atBottom =
+            el.scrollTop + el.clientHeight >= el.scrollHeight - 2;
 
-        showScrollHint = hasOverflow && !atBottom;
-      }
+          setShow(hasOverflow && !atBottom);
+        }
+      };
     }
+
+    let dadosChecker, mapasChecker;
 
     if (dadosColumn) {
-      dadosColumn.addEventListener("scroll", checkOverflow);
+      dadosChecker = makeScrollChecker(
+        dadosColumn,
+        (v) => (showScrollHintDados = v),
+      );
+      dadosColumn.addEventListener("scroll", dadosChecker);
+      dadosChecker();
     }
 
-    checkOverflow();
-    window.addEventListener("resize", checkOverflow);
+    if (mapasColumn) {
+      mapasChecker = makeScrollChecker(
+        mapasColumn,
+        (v) => (showScrollHintMapas = v),
+      );
+      mapasColumn.addEventListener("scroll", mapasChecker);
+      mapasChecker();
+    }
+
+    window.addEventListener("resize", () => {
+      dadosChecker?.();
+      mapasChecker?.();
+    });
 
     return () => {
-      if (dadosColumn) {
-        dadosColumn.removeEventListener("scroll", checkOverflow);
+      if (dadosColumn && dadosChecker) {
+        dadosColumn.removeEventListener("scroll", dadosChecker);
       }
-      window.removeEventListener("resize", checkOverflow);
+      if (mapasColumn && mapasChecker) {
+        mapasColumn.removeEventListener("scroll", mapasChecker);
+      }
+      window.removeEventListener("resize", () => {
+        dadosChecker?.();
+        mapasChecker?.();
+      });
     };
   });
 
@@ -120,7 +148,9 @@
 
 <div class="layout">
   <div class="left">
-    <header class="main-header">474, JACARÉ COPACABANA: DATA CRITIC</header>
+    <header class="main-header">
+      <a href="/" use:link>474, JACARÉ COPACABANA: DATA CRITIC</a>
+    </header>
     <Home />
 
     <div class="columns">
@@ -129,9 +159,15 @@
         <ul>
           {#each textos as t}
             <li>
-              <a href={t.link} use:link on:click={() => openOverlay(t.link)}
-                >{t.title}</a
-              >
+              {#if t.link.startsWith("http")}
+                <a href={t.link} target="_blank" rel="noopener noreferrer">
+                  {t.title}
+                </a>
+              {:else}
+                <a href={t.link} use:link on:click={() => openOverlay(t.link)}>
+                  {t.title}
+                </a>
+              {/if}
             </li>
           {/each}
         </ul>
@@ -139,12 +175,19 @@
 
       <section class="mapa-col" bind:this={mapasColumn}>
         <h4>MAPAS</h4>
+        <div class="scroll-hint" class:visible={showScrollHintMapas}>↓</div>
         <ul>
           {#each mapas as m}
             <li>
-              <a href={m.link} use:link on:click={() => openOverlay(m.link)}
-                >{m.title}</a
-              >
+              {#if m.link.startsWith("http")}
+                <a href={m.link} target="_blank" rel="noopener noreferrer"
+                  >{m.title}</a
+                >
+              {:else}
+                <a href={m.link} use:link on:click={() => openOverlay(m.link)}
+                  >{m.title}</a
+                >
+              {/if}
               {#if m.decodeRefs?.length}
                 <div class="related">
                   <small
@@ -166,7 +209,7 @@
 
       <section class="dado-col" bind:this={dadosColumn}>
         <h4>DADOS</h4>
-        <div class="scroll-hint" class:visible={showScrollHint}>↓</div>
+        <div class="scroll-hint" class:visible={showScrollHintDados}>↓</div>
         <ul>
           {#each dadosLinks as d}
             <li>
@@ -336,6 +379,11 @@
     overflow-y: auto;
   }
 
+  .mapa-col {
+    position: relative; /* so the arrow can be absolutely positioned */
+    overflow-y: auto;
+  }
+
   .scroll-hint {
     position: absolute;
     bottom: 0.5rem;
@@ -352,6 +400,16 @@
   .scroll-hint.visible {
     display: block;
     animation: bounce 1.5s infinite;
+  }
+
+  section h4 {
+    position: sticky;
+    top: 0; /* sticks to the top of the column */
+    background: #f3f3e4; /* same background as the column so text doesn’t overlap */
+    padding: 0.5rem 1rem;
+    z-index: 2; /* keeps it above list items */
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
   }
 
   @keyframes bounce {

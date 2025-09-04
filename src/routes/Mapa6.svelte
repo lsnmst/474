@@ -2,8 +2,8 @@
     import { onMount } from "svelte";
     import Panzoom from "@panzoom/panzoom";
 
-    export let src = "celular.svg";
-    export let height = "1000px";
+    export let src = "trafego.svg";
+    export let height = "800px";
     export let width = "100%";
 
     let svgContainer;
@@ -48,13 +48,15 @@
 </script>
 
 <h3>
-    Estatísticas de roubos de celulares em julho de 2025 nas áreas atravessadas
-    pela rota do 474
+    Mapa da circulação de ônibus entre as 6h e as 6h30 do dia 10 de junho de
+    2025, durante a operação policial no complexo de Israel
 </h3>
 
 <p>
-    Este mapa apresenta as estatísticas por área de Circunscrição Integrada de
-    Segurança Pública (CISP) de roubos de celulares no mês de julho de 2025.
+    Este mapa mostra o trajeto de todos os ônibus municipais em circulação entre
+    as 6h e as 6h30 do dia 10 de junho de 2025. Na altura do complexo de Israel,
+    é possível observar um bloqueio no trânsito que corta a avenida Brasil em
+    dois trechos.
 </p>
 <div class="svg-wrapper" style:width style:height>
     <div

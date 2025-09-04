@@ -1,6 +1,7 @@
 export const textos = [
-    { title: "Nunca é noite no mapa", link: "/textos/nunca-e-moite-no-mapa" },
+    { title: "474 Jacaré/Copacabana", link: "https://sobinfluencia.com/produtos/474-jacare-copacabana/" },
     { title: "Linhas", link: "/textos/linhas" },
+    { title: "Nunca é noite no mapa", link: "/textos/nunca-e-moite-no-mapa" },
 ];
 
 export const mapas = [
@@ -29,24 +30,24 @@ export const mapas = [
         link: "/mapas/mapa5",
         decodeRefs: ["/decode/decode6"]
     },
+    {
+        title: "Mapa da circulação de ônibus entre as 6h e as 6h30 do dia 10 de junho de 2025, durante a operação policial no complexo de Israel",
+        link: "/mapas/mapa6",
+        decodeRefs: ["/decode/decode7"]
+    },
 
 ];
 
 export const dadosLinks = [
     {
-        title: "Tabela com todos os registros de GPS",
-        link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_onibus_gps&t=sppo_registros&page=table",
-        decodeRefs: []
-    },
-    {
         title: "Tabela de posições de GPS de todos os validadores da Jaé instalados, incluindo estado do equipamento, serviço, sentido e veículo associado e temperatura do veículo.",
         link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=monitoramento&t=gps_validador&page=table",
-        decodeRefs: ["/decode/decode1", "/decode/decode7", "/decode/decode8"]
+        decodeRefs: ["/decode/decode1", "/decode/decode8"]
     },
     {
         title: "Tabela com os dados tratados de registros de GPS do SPPO, incluindo velocidade estimada, estado de movimento, parada em terminal ou garagem e interseção com o traçado da linha informada",
         link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_veiculos&t=gps_sppo&page=table",
-        decodeRefs: ["/decode/decode5"]
+        decodeRefs: ["/decode/decode5", "/decode/decode7"]
     },
     {
         title: "Tabela de contagem do número de passageiros por hora. Agrega valores da tabela de transações por: data, hora, modo, consorcio, operadora, servico, sentido e tipo_transacao",
