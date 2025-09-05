@@ -3,22 +3,74 @@
     import Prism from "prismjs";
     import "prismjs/components/prism-sql.js";
     import "prismjs/themes/prism-tomorrow.css";
-    import { produto474 } from "../data/produto474.js";
-    import { dinhero } from "../data/dinhero.js";
-    import { dinhero_erro } from "../data/dinhero_erro.js";
-    import SvgDinhero from "./Mapa4.svelte";
-    import SvgCelular from "./Mapa5.svelte";
+    import { cor_class } from "../data/cor_class.js";
+    import { cor_jacare } from "../data/cor_jacare.js";
+
+    import Panzoom from "@panzoom/panzoom";
+    export let src = "buraco.svg";
+    export let height = "1000px";
+    export let width = "100%";
 
     onMount(() => {
         Prism.highlightAll();
     });
+
+    let svgContainer;
+    let panzoom;
+
+    onMount(async () => {
+        const url = `${import.meta.env.BASE_URL}${src}`;
+        const res = await fetch(url);
+        const svgText = await res.text();
+
+        svgContainer.innerHTML = svgText;
+
+        const svgElement = svgContainer.querySelector("svg");
+
+        if (svgElement) {
+            panzoom = Panzoom(svgElement, {
+                contain: "outside",
+                maxScale: 10,
+                minScale: 1,
+            });
+
+            svgElement.parentElement.addEventListener("wheel", (e) => {
+                if (e.ctrlKey) {
+                    e.preventDefault();
+                    panzoom.zoomWithWheel(e);
+                }
+            });
+        }
+    });
+
+    function zoomIn() {
+        panzoom?.zoomIn();
+    }
+
+    function zoomOut() {
+        panzoom?.zoomOut();
+    }
+
+    function reset() {
+        panzoom?.reset();
+    }
 </script>
 
 <div class="content">
     <div class="intro-decode">
         <div class="pres-decode">
             <h1>Com os pés molhados</h1>
-            <p>TXT</p>
+            <p>
+                O Centro Operacional Rio - COR, com seu sistema de alerta
+                suportado por seus modelos de previsão baseados em dados,
+                anunciou que os cariocas nunca mais serão pegos de surpresa por
+                eventos meteorológicos. No Jacarezinho, os moradores não
+                precisam do sistema de alerta. Quem precisa cruzar o Buraco de
+                Lacerda, já há 50 anos, quando chove, sabe que vai molhar os
+                pés, alguém vai aparecer tomando banho quando virar uma piscina
+                e o 629 vira submarino. Uma interrupção na via que tem
+                consequências no sistema de transportes.
+            </p>
         </div>
         <div class="refer-decode">
             <h4>Banco de dados utilizado nesta decodificação</h4>
@@ -47,11 +99,64 @@
     </div>
 
     <div class="content-decode">
-        <p></p>
+        <p>
+            Inaugurado em dezembro de 2010, após uma tempestade ter atingido a
+            cidade, o Centro Operacional Rio - COR é um aparato composto por
+            sensores espalhados pela cidade (câmeras, telefones, estações
+            meteorológicas), que geram dados e, além de monitorar as condições
+            meteorológicas, procura minimizar outros eventos de grande impacto
+            na cidade, como deslizamentos de terra e acidentes rodoviários.
+        </p>
+
+        <p style="font-family: 'Roboto Mono'; font-size:0.8rem;">
+            Antes de sua criação, chuvas e outros eventos pegavam a
+            administração pública e os cariocas de surpresa. Depois do COR,
+            soluções são antecipadas, alertando os setores responsáveis sobre os
+            riscos e as medidas urgentes que devem ser tomadas em casos de crise
+            - Equipe do COR.
+        </p>
+
+        <p>
+            Para entender quais regiões da cidade têm enchentes e averiguar se
+            esses eventos causaram interrupções no serviço de transporte, é
+            necessário identificar como o banco de dados do COR classifica os
+            eventos. O banco de dados do COR organiza em 42 classes os eventos
+            que podem ocorrer na cidade:
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID evento</th>
+                    <th>Evento</th>
+                </tr>
+            </thead>
+            <tbody>
+                {#each cor_class as row}
+                    <tr
+                        class:selected={Number(row.id_pop) === 5 ||
+                            Number(row.id_pop) === 31 ||
+                            Number(row.id_pop) === 32 ||
+                            Number(row.id_pop) === 33}
+                    >
+                        <td>{row.id_pop}</td>
+                        <td>{row.pop_titulo}</td>
+                    </tr>
+                {/each}
+            </tbody>
+        </table>
 
         <div class="split-cont">
             <div class="split-left">
-                <p></p>
+                <p>
+                    Os dados do COR estão disponíveis no banco de dados <a
+                        href="https://console.cloud.google.com/bigquery?p=datario&d=adm_cor_comando&t=ocorrencias&page=table"
+                        target="_blank"
+                        >Ocorrências disparadas pelo COR desde 2015</a
+                    >. Por exemplo, para extrair todos os dados relativos a um
+                    bairro ou através de uma palavra-chave, é possível executar
+                    a busca:
+                </p>
             </div>
             <div class="split-right">
                 <p>
@@ -78,11 +183,79 @@
             </div>
         </div>
 
-        <!-- CODE BLOCK -->
+        <pre><code class="language-sql">
+-- Lógica: Selecionar todos os eventos
+-- no banco de dados (`datario.adm_cor_comando.ocorrencias`) 
+-- que atendem às condições: são identificados como Bolsão d'água em via, Alagamento, Enchente, Lâmina d'água [id_pop IN ('5','31','32','33')] e
+-- dentro desses eventos, tenha ocorrido no Jacaré (bairro = "Jacaré") ou
+-- na sua descrição, seja citado Jacaré (descricao LIKE '%jacaré%')
 
-        <pre><code class="language-sql"></code></pre>
+SELECT *
+FROM `datario.adm_cor_comando.ocorrencias`
+WHERE id_pop IN ('5','31','32','33')
+  AND (
+    bairro = "Jacaré"
+    OR descricao LIKE '%jacaré%'
+  );
 
-        <p></p>
+    </code></pre>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID evento</th>
+                    <th>Data de início</th>
+                    <th>Data de fim</th>
+                    <th>Descrição</th>
+                    <th>Gravidade</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                </tr>
+            </thead>
+            <tbody>
+                {#each cor_jacare as row}
+                    <tr>
+                        <td>{row.id_pop}</td>
+                        <td>{row.data_inicio}</td>
+                        <td>{row.data_fim}</td>
+                        <td>{row.descricao}</td>
+                        <td>{row.gravidade}</td>
+                        <td>{row.latitude}</td>
+                        <td>{row.longitude}</td>
+                    </tr>
+                {/each}
+            </tbody>
+        </table>
+
+        <p>
+            Ao ler os dados, fica evidente que o Buraco do Lacerda, como é
+            chamada a passagem sob os trilhos construída na década de 1960
+            durante os projetos de saneamento dos bairros Jacaré e Benfica, é
+            constantemente atingida por problemas de alagamento. Esse caminho é
+            o trajeto da linha 629 Irajá - Saens Peña.<br /><br />Em agosto de
+            2024, a obra na ponte ferroviária do Buraco da Lacerda e a melhoria
+            do sistema de drenagem de água em caso de chuva foram concluídas,
+            com a interdição da via por 40 dias. Ao mapear o fluxo diário da
+            linha 629 Irajá - Saens Peña durante o período de fechamento da via,
+            é possível observar o trajeto alternativo feito pelos veículos, o
+            mesmo que ainda é percorrido quando chuvas intensas, com a ajuda do
+            lixo que obstrui a infraestrutura de drenagem, inundam a via
+            impedindo a circulação (em roxo, o caminho alternativo):
+        </p>
+
+        <div class="svg-wrapper" style:width style:height>
+            <div
+                class="svg-container"
+                bind:this={svgContainer}
+                style="border:1px solid #ccc; overflow:hidden; width:100%; height:100%;"
+            ></div>
+
+            <div class="controls">
+                <button on:click={zoomIn}>+</button>
+                <button on:click={zoomOut}>–</button>
+                <button on:click={reset}>Reset</button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -220,6 +393,11 @@
     td {
         padding: 0.6rem;
         text-align: center;
+    }
+
+    tr.selected {
+        background-color: #d2fb85;
+        font-weight: bold;
     }
 
     @media (max-width: 768px) {
