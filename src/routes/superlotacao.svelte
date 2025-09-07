@@ -211,7 +211,7 @@ AND quantidade_passageiros > 500
 
         <div style="display: flex; justify-content: center;">
             <table
-                style="display: block; max-height: 500px; overflow-y: scroll;"
+                style="display: block; max-height: 500px; overflow-y: scroll; border-bottom: rgb(42, 10, 92) 1px solid;"
             >
                 <thead style="position: sticky; top: 0;">
                     <tr>
@@ -255,7 +255,7 @@ AND quantidade_passageiros > 500
                     500 passageiros por hora são as seguintes:
                 </p>
                 <table
-                    style="display: block; max-height: 400px; overflow-y: scroll;"
+                    style="display: block; max-height: 500px; overflow-y: scroll; border-bottom: rgb(42, 10, 92) 1px solid;"
                 >
                     <thead style="position: sticky; top: 0;">
                         <tr>

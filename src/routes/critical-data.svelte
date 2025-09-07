@@ -1,91 +1,59 @@
 <script>
-    import { onMount } from "svelte";
-    import Prism from "prismjs";
-    import "prismjs/components/prism-sql.js";
-    import "prismjs/themes/prism-tomorrow.css";
-    import { produto474 } from "../data/produto474.js";
-    import { dinhero } from "../data/dinhero.js";
-    import { dinhero_erro } from "../data/dinhero_erro.js";
-    import SvgDinhero from "./Mapa4.svelte";
-    import SvgCelular from "./Mapa5.svelte";
+    import { dadosuteis } from "../data/dadosuteis.js";
 
-    onMount(() => {
-        Prism.highlightAll();
-    });
+    let visible = true;
+
+    function close() {
+        visible = false;
+    }
 </script>
 
-<div class="content">
+{#if visible}
     <div class="intro-decode">
-        <div class="pres-decode">
-            <h1>As ambições do 1736</h1>
-            <p>TXT</p>
-        </div>
-        <div class="refer-decode">
-            <h4>Banco de dados utilizado nesta decodificação</h4>
-            <ul>
-                <li>
-                    <a
-                        href="https://console.cloud.google.com/bigquery?p=datario&d=adm_central_atendimento_1746&t=chamado&page=table"
-                        target="_blank"
-                        >Chamados feitos ao 1746 desde março de 2011</a
-                    >
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a
-                        href="https://console.cloud.google.com/bigquery?p=datario&d=dados_mestres&t=bairro&page=table"
-                        target="_blank">Bairros da Cidade do Rio de Janeiro</a
-                    >
-                </li>
-            </ul>
-        </div>
+        <h1>
+            Bases de dados para analisar de forma sistemática o sistema de
+            transportes
+        </h1>
     </div>
+{/if}
 
-    <div class="content-decode">
-        <p></p>
-
-        <div class="split-cont">
-            <div class="split-left">
-                <p></p>
-            </div>
-            <div class="split-right">
-                <p>
-                    Este exercício é conduzido através dos serviços do Google
-                    Cloud. Para conectar sua conta do Google e aprender suas
-                    funções básicas, siga o
-                    <a
-                        target="_blank"
-                        href="https://docs.dados.rio/tutoriais/como-acessar-dados/"
-                        >tutorial</a
-                    >. Caso contrário, use preferencialmente
-                    <a
-                        target="_blank"
-                        href="https://docs.dados.rio/tutoriais/como-acessar-dados/#acessando-dados-via-python"
-                        >Python</a
+<div class="content-decode">
+    <table>
+        <thead>
+            <tr>
+                <th>Tema</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            {#each dadosuteis as row}
+                <tr>
+                    <td>{row.topic}</td>
+                    <td>{row.name}</td>
+                    <td>{row.description}</td>
+                    <td>
+                        {#if row.link}
+                            <a
+                                href={row.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {row.link}
+                            </a>
+                        {/if}</td
                     >
-                    ou
-                    <a
-                        target="_blank"
-                        href="https://docs.dados.rio/tutoriais/como-acessar-dados/#acessando-dados-via-r"
-                        >R</a
-                    >.
-                </p>
-            </div>
-        </div>
-
-        <!-- CODE BLOCK -->
-
-        <pre><code class="language-sql"></code></pre>
-
-        <p></p>
-    </div>
+                </tr>
+            {/each}
+        </tbody>
+    </table>
 </div>
 
 <style>
     .intro-decode {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr;
         padding: 3rem;
         margin-bottom: 2rem;
         background: #d2fb85;

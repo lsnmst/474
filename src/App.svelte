@@ -6,6 +6,7 @@
   import Home from "./routes/Home.svelte";
   import Nunca from "./routes/Nunca.svelte";
   import Linhas from "./routes/Linhas.svelte";
+  import Criticaldata from "./routes/critical-data.svelte";
   import Texto3 from "./routes/Texto3.svelte";
   import Texto4 from "./routes/Texto4.svelte";
   import Mapa1 from "./routes/Mapa1.svelte";
@@ -15,20 +16,21 @@
   import Mapa5 from "./routes/Mapa5.svelte";
   import Mapa6 from "./routes/Mapa6.svelte";
   import Dados from "./routes/Dados.svelte";
-  import Decode1 from "./routes/Decode1.svelte";
-  import Decode2 from "./routes/Decode2.svelte";
-  import Decode3 from "./routes/Decode3.svelte";
+  import Decode1 from "./routes/rio-60-graus.svelte";
+  import Decode2 from "./routes/indo-alimentar-os-bairros-ricos.svelte";
+  import Decode3 from "./routes/superlotacao.svelte";
   // import Decode4 from "./routes/Decode4.svelte";
-  import Decode5 from "./routes/Decode5.svelte";
-  import Decode6 from "./routes/Decode6.svelte";
-  import Decode7 from "./routes/Decode7.svelte";
-  import Decode8 from "./routes/Decode8.svelte";
-  import Decode9 from "./routes/Decode9.svelte";
+  import Decode5 from "./routes/uma-questao-de-cor.svelte";
+  import Decode6 from "./routes/nova-forma-de-esclusao.svelte";
+  import Decode7 from "./routes/em-alerta-avenida-brasil.svelte";
+  import Decode8 from "./routes/pes-molhados.svelte";
+  import Decode9 from "./routes/portal-1736.svelte";
 
   const routes = {
     "/": Home,
     "/textos/nunca-e-moite-no-mapa": Nunca,
     "/textos/linhas": Linhas,
+    "/textos/critical-data": Criticaldata,
     "/textos/texto3": Texto3,
     "/textos/texto4": Texto4,
     "/mapas/mapa1": Mapa1,
@@ -38,15 +40,15 @@
     "/mapas/mapa5": Mapa5,
     "/mapas/mapa6": Mapa6,
     "/dados": Dados,
-    "/decode/decode1": Decode1,
-    "/decode/decode2": Decode2,
-    "/decode/decode3": Decode3,
+    "/decode/rio-60-graus": Decode1,
+    "/decode/indo-alimentar-os-bairros-ricos": Decode2,
+    "/decode/superlotacao": Decode3,
     // "/decode/decode4": Decode4,
-    "/decode/decode5": Decode5,
-    "/decode/decode6": Decode6,
-    "/decode/decode7": Decode7,
-    "/decode/decode8": Decode8,
-    "/decode/decode9": Decode9,
+    "/decode/uma-questao-de-cor": Decode5,
+    "/decode/nova-forma-de-esclusao": Decode6,
+    "/decode/em-alerta-avenida-brasil": Decode7,
+    "/decode/pes-molhados": Decode8,
+    "/decode/portal-1736": Decode9,
   };
 
   let activeLink = "";
