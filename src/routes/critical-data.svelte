@@ -21,26 +21,37 @@
     <table>
         <thead>
             <tr>
-                <th>Tema</th>
+                <th>Palavras-chave</th>
                 <th>Nome</th>
-                <th>Descrição</th>
-                <th>Link</th>
+                <th
+                    >Banco de dados espacial relacionado para realizar análises
+                    espaciais</th
+                >
             </tr>
         </thead>
         <tbody>
             {#each dadosuteis as row}
                 <tr>
                     <td>{row.topic}</td>
-                    <td>{row.name}</td>
-                    <td>{row.description}</td>
                     <td>
-                        {#if row.link}
+                        {#if row.link_name}
                             <a
-                                href={row.link}
+                                href={row.link_name}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                {row.link}
+                                {row.description}
+                            </a>
+                        {/if}</td
+                    >
+                    <td>
+                        {#if row.GIS_link}
+                            <a
+                                href={row.GIS_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {row.GIS}
                             </a>
                         {/if}</td
                     >
@@ -173,6 +184,12 @@
         font-family: "Roboto Mono", sans-serif;
         font-size: 0.7rem;
         margin: 4rem auto;
+    }
+
+    table a {
+        color: rgb(42, 10, 92) !important;
+        font-weight: 400;
+        text-decoration: underline;
     }
 
     p {
