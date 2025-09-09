@@ -192,7 +192,7 @@
                         href="https://console.cloud.google.com/bigquery?p=datario&d=dados_mestres&t=bairro&page=table"
                         target="_blank">Bairros da Cidade do Rio de Janeiro</a
                     >. O banco de dados completo, incluindo os dados
-                    geográficos, pode ser baixado executando a busca:
+                    geográficos, pode ser baixado executando a consulta:
                 </p>
             </div>
             <div class="split-right">
@@ -281,7 +281,7 @@ FROM `datario.dados_mestres.bairro`
                         >Chamados feitos ao 1746 desde março de 2011</a
                     >. Para acessar as solicitações recebidas ao longo dos
                     últimos 5 anos nos bairros atravessados pelo 474, pode ser
-                    executa a busca:
+                    executa a consulta:
                 </p>
             </div>
             <div class="split-right">
@@ -330,7 +330,7 @@ AND id_bairro IN ('3','5','6','8','10','11','12','14','17','20','24','32','51','
             projetado com a expectativa de que toda a população o utilizasse
             (proposta irrealizável), enquanto as solicitações recebidas são
             mínimas.<br /><br />Não há quase ninguém que denuncie assédio sexual
-            no Portal 1736 (1 caso nos resultados da busca), mas isso não
+            no Portal 1736 (1 caso nos resultados da consulta), mas isso não
             significa que não exista. Dessa forma, as dinâmicas não emergem e,
             pelo contrário, são distorcidas. E a
             <a target="_blank" href="https://www.1746.rio/hc/pt-br/p/relatorios"

@@ -3,7 +3,7 @@
     import Panzoom from "@panzoom/panzoom";
 
     export let src = "/temp.svg";
-    export let height = "500px";
+    export let height = "800px";
     export let width = "100%";
 
     let svgContainer;

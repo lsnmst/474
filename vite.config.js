@@ -11,10 +11,14 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      // no special config needed
-    }
+      output: {
+        manualChunks: {
+          prism: ["prismjs"],
+          panzoom: ["@panzoom/panzoom"],
+        },
+      },
+    },
   },
-  // this is the important part 👇
   optimizeDeps: {},
   preview: {
     // fallback to index.html for SPA routes

@@ -87,7 +87,7 @@
 
     <div class="content-decode">
         <p>
-            Em 22 de julho de 2025, a Prefeitura do Rio de Janeiro publicou um
+            Dia 22 de julho de 2025, a Prefeitura do Rio de Janeiro publicou um
             edital de consulta pública para a primeira fase da nova licitação do
             sistema de ônibus da cidade. O <a
                 href="https://transportes.prefeitura.rio/wp-content/uploads/sites/31/2025/07/ANEXO-I.4-Especificacao-de-frota.pdf"
@@ -118,16 +118,16 @@
         </p>
 
         <p style="font-family: 'Roboto Mono'; font-size:0.8rem;">
-            (josoe.dejesus.7) Quem acha ok certamente nunca ficou sem bateria na
-            volta do trabalho pra casa e sem o bilhete único. Dinheiro a gente
-            ainda consegue pedir emprestado e se virar, mas e quem tá sem
+            [Josue] Quem acha ok certamente nunca ficou sem bateria na volta do
+            trabalho pra casa e sem o bilhete único. Dinheiro a gente ainda
+            consegue pedir emprestado e se virar, mas e quem tá sem
             celular/carteira, quem foi roubado (muito comum)? Como vai voltar
-            pra casa? (fe1emdeus42) A realidade de quem usa com certeza é outra
-            !! Principalmente quando os cartões não passam, sem dizer
-            estudantes. Os passes sempre dão problemas. (rafael.monteiro93) Algo
-            difícil de acontecer é a extinção do dinheiro vivo, vindo do final
-            de mês, ausência de pontos de recargas em municípios e bairros. O
-            bilhete único só contempla 1 CPF..
+            pra casa? [Fernanda] A realidade de quem usa com certeza é outra !!
+            Principalmente quando os cartões não passam, sem dizer estudantes.
+            Os passes sempre dão problemas. [Rafael] Algo difícil de acontecer é
+            a extinção do dinheiro vivo, vindo do final de mês, ausência de
+            pontos de recargas em municípios e bairros. O bilhete único só
+            contempla 1 CPF..
         </p>
 
         <p style="margin-bottom: 10rem;">
@@ -153,7 +153,7 @@
                     'Gratuidade Operadora', 'Cartão Avulso', 'Carteira',
                     'Gratuidade', 'VT'. Para identificar as transações em
                     dinheiro ocorridas no 474 durante um certo intervalo de
-                    tempo, é possível executar a seguinte busca:
+                    tempo, é possível realizar a seguinte consulta:
                 </p>
             </div>
             <div class="split-right">
@@ -203,7 +203,7 @@ AND servico_jae = "474"
             pagamentos em dinheiro foram 56 (0.06% do total das transações de
             agosto de 2025, de um total de 99.557 transações). Para apurar o
             número de transações por tipo e o valor das transações no mês de
-            agosto, é possível executar a seguinte busca:
+            agosto, é possível realizar a seguinte consulta:
         </p>
 
         <pre><code class="language-sql">
@@ -365,6 +365,14 @@ ORDER BY variacao_percentual DESC;
             Quem tá sem celular/carteira, quem foi roubado (muito comum), como
             vai voltar pra casa?
         </h3>
+
+        <div class="bicolor" style="margin-top:2rem;">
+            <img src="roubo_celular.jpg" alt="Prefeito sensor temperatura" />
+        </div>
+        <p style="text-align: center; font-size:0.8rem; margin:1rem 0 3rem 0">
+            Menino pega celular de passageira de ônibus — Foto: Reprodução/ TV
+            Globo
+        </p>
 
         <div class="split-cont">
             <div class="split-left">
@@ -543,6 +551,27 @@ ORDER BY variacao_percentual DESC;
     td {
         padding: 0.6rem;
         text-align: center;
+    }
+
+    .bicolor {
+        position: relative;
+        display: inline-block;
+    }
+
+    .bicolor img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .bicolor::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(45deg, #d2fb85, #c743c7);
+        mix-blend-mode: overlay; /* try: screen, overlay, difference */
+        opacity: 1; /* adjust intensity */
+        pointer-events: none;
     }
 
     @media (max-width: 768px) {

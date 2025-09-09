@@ -2,7 +2,6 @@ export const textos = [
     { title: "474 Jacaré/Copacabana", link: "https://sobinfluencia.com/produtos/474-jacare-copacabana/" },
     { title: "Linhas", link: "/textos/linhas" },
     { title: "Nunca é noite no mapa", link: "/textos/nunca-e-moite-no-mapa" },
-    { title: "Bases de dados para analisar de forma sistemática o sistema de transportes", link: "/textos/critical-data" },
 ];
 
 export const mapas = [
@@ -108,6 +107,12 @@ export const dadosLinks = [
         link: "https://dadosabertos.rj.gov.br/dataset/isp-estatisticas-de-seguranca-publica/resource/3e553e0b-ff90-48ad-9584-90df6baeea6c",
         decodeRefs: ["/decode/nova-forma-de-esclusao"]
     },
+    {
+        title: "Bases de dados para analisar de forma sistemática o sistema de transportes",
+        link: "/textos/critical-data",
+        decodeRefs: []
+    },
+
 
 ];
 

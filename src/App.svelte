@@ -176,7 +176,7 @@
       </section>
 
       <section class="mapa-col" bind:this={mapasColumn}>
-        <h4>MAPAS</h4>
+        <h4>MAPA</h4>
         <div class="scroll-hint" class:visible={showScrollHintMapas}>↓</div>
         <ul>
           {#each mapas as m}
@@ -193,7 +193,7 @@
               {#if m.decodeRefs?.length}
                 <div class="related">
                   <small
-                    >Consulte
+                    >Gerado na decodificação<br />
                     {#each getDecodeItems(m.decodeRefs) as r}
                       <a
                         href={r.link}
@@ -210,7 +210,7 @@
       </section>
 
       <section class="dado-col" bind:this={dadosColumn}>
-        <h4>DADOS</h4>
+        <h4>DADO</h4>
         <div class="scroll-hint" class:visible={showScrollHintDados}>↓</div>
         <ul>
           {#each dadosLinks as d}
@@ -227,7 +227,7 @@
               {#if d.decodeRefs?.length}
                 <div class="related">
                   <small
-                    >Consulte
+                    >Utilizado na decodificação(es)<br />
                     {#each getDecodeItems(d.decodeRefs) as r}
                       <a
                         href={r.link}

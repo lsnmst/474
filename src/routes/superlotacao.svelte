@@ -90,7 +90,7 @@
 
     <div class="content-decode">
         <p>
-            Em 16 de julho de 2025, a Prefeitura do Rio reduziu em 20% o número
+            Dia 16 de julho de 2025, a Prefeitura do Rio reduziu em 20% o número
             de viagens de ônibus nas ruas da cidade. Em nota, a Secretaria
             Municipal de Transportes afirmou que a medida é um ajuste no plano
             operacional (atualizado a cada 15 dias) com o objetivo de “aumentar
@@ -237,9 +237,21 @@ AND quantidade_passageiros > 500
             outubro de 2024, data do primeiro turno das eleições municipais
             2024. Naquele dia, o recorde de 500 passageiros por hora foi
             superado 5 vezes. Metrô, barcas, trens, ônibus e vans funcionaram
-            gratuitamente no dia das eleições, das 6h às 20h, para permitir que
-            todos os eleitores pudessem chegar aos locais de votação e voltar
-            para casa.
+            gratuitamente no dia das eleições municipais, das 6h às 20h, para
+            permitir que todos os eleitores pudessem chegar aos locais de
+            votação e voltar para casa.
+        </p>
+
+        <div class="bicolor" style="margin-top:2rem; max-width: 400px;">
+            <img src="tarifa-zero.jpg" alt="Prefeito sensor temperatura" />
+        </div>
+        <p style="text-align: center; font-size:0.8rem; margin:1rem 0 3rem 0">
+            <a
+                target="_blank"
+                href="https://autonomialiteraria.com.br/loja/reportagem/sem-catraca-da-utopia-a-realidade-da-tarifa-zero/"
+                >Daniel Santini (2024), Sem catraca: da utopia à realidade da
+                Tarifa Zero</a
+            >
         </p>
 
         <h3>
@@ -492,6 +504,27 @@ JOIN shapes g
     td {
         padding: 0.6rem;
         text-align: center;
+    }
+
+    .bicolor {
+        position: relative;
+        display: inline-block;
+    }
+
+    .bicolor img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .bicolor::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(45deg, #d2fb85, #c743c7);
+        mix-blend-mode: overlay; /* try: screen, overlay, difference */
+        opacity: 1; /* adjust intensity */
+        pointer-events: none;
     }
 
     @media (max-width: 768px) {

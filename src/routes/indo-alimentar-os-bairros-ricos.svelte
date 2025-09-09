@@ -99,6 +99,22 @@
     </div>
 
     <div class="content-decode">
+        <p style="font-family: 'Roboto Mono'; font-size:0.8rem;">
+            A cada dez minutos, um 474 lotado e suado atravessa o túnel de Santa
+            Bárbara. É a metade da viagem, que pode levar até 2h30 até a parada
+            final. Desde a primeira parada, do outro lado, começa o desembarque:
+            babás, diaristas, empregadas domésticas, vendedoras, garçons e
+            pedreiros. É em Copacabana que o ônibus começa a esvaziar com mais
+            intensidade. Pela porta traseira, seus passageiros se dirigem aos
+            balcões das lojas, cafeterias ou à cozinha do chefe, aos quais se
+            acessa por portas dissimuladas em entradas de garagens e elevadores
+            segregados. O barulho do motor é substituído pelo barulho dos
+            martelos e sinos dos restaurantes. Os espaços e a rotina servil são
+            vividos em pé, desde a espera pelo ônibus no ponto até o retorno
+            para casa, que só com muita sorte poderá ser feito sentado - Gabriel
+            Weber, 2024.
+        </p>
+
         <div class="split-cont">
             <div class="split-left">
                 <p>
@@ -112,7 +128,7 @@
                     embarcados no 474 em ambos os sentidos, entre 17 e 21 de
                     fevereiro de 2025, uma semana comun de trabalho antes do
                     carnaval e no meio de uma onda de calor, é necessário
-                    executar a seguinte busca:
+                    realizar a seguinte consulta:
                 </p>
             </div>
             <div class="split-right">
@@ -223,8 +239,9 @@ ORDER BY data, hora
             Enquanto desde cedo os moradores da zona norte embarcam nos ônibus
             para atravessar o túnel de Santa Bárbara, a zona sul ainda dorme. Ao
             calcular a diferença entre a média de passageiros nos dois sentidos
-            (por exemplo, no intervalo horário das 4 às 12), a diferença é
-            gritante:
+            (por exemplo, no intervalo horário das 4 às 12), mesmo considerando
+            as múltiplas modalidades de transporte e linhas para se deslocar
+            pela zona sul ou para o norte, a diferença é gritante:
         </p>
 
         <pre><code class="language-sql">
@@ -339,9 +356,9 @@ ORDER BY hora
                         target="_blank">h3_res9</a
                     >
                     , está localizado no hexágono identificado como "89a8a06113bffff".
-                    <br /><br />Tendo esse identificador, é possível determinar
-                    o número de passageiros embarcados no 474 nesse ponto,
-                    consultando o banco de dados chamado
+                    <br /><br />
+                    Tendo esse identificador, é possível determinar o número de passageiros
+                    embarcados no 474 nesse ponto, consultando o banco de dados chamado
                     <a
                         href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=bilhetagem&t=passageiro_tile_hora&page=table"
                         target="_blank"
@@ -349,7 +366,7 @@ ORDER BY hora
                         Agrega valores das tabelas transacao e transacao_riocard
                         por: data, hora, modo, consorcio, operadora, servico,
                         sentido, tipo_transacao e tile_id</a
-                    >, executando a seguinte busca:
+                    >, executando a seguinte consulta:
                 </p>
             </div>
             <div class="split-right">
@@ -376,6 +393,15 @@ ORDER BY hora
                 </p>
             </div>
         </div>
+
+        <pre><code class="language-sql">
+-- Lógica: obter a malha hexagonal visualizável através do software GIS,
+-- no banco de dados (`rj-smtr.br_rj_riodejaneiro_geo.h3_res9`) 
+
+SELECT * 
+FROM `rj-smtr.br_rj_riodejaneiro_geo.h3_res9`
+
+    </code></pre>
 
         <pre><code class="language-sql">
 -- Lógica: selecionar as colunas data e hora e criar uma coluna que represente a soma da quantidade de passageiros retirada da coluna “quantidade_passageiros” ( essa coluna deve ser chamada de “total_passageiros”)

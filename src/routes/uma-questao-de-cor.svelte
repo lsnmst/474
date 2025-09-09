@@ -116,6 +116,19 @@
         de um deles e mexeu em aplicativos e mensagens privadas. Outro jovem
         mostrou a carteira de trabalho.
     </p>
+
+    <div class="bicolor" style="margin-top:2rem; max-width: 400px">
+        <img src="mobilidade-anti.png" alt="Prefeito sensor temperatura" />
+    </div>
+    <p style="text-align: center; font-size:0.8rem; margin:1rem 0 3rem 0">
+        <a
+            target="_blank"
+            href="https://autonomialiteraria.com.br/loja/teoria-politica/mobilidade-antirrascista/"
+            >Daniel Santini, Paíque Duques Santarém, Rafaela Albergaria (2021),
+            Mobilidade antirrascista</a
+        >
+    </p>
+
     <h3>
         Qual foi o trajeto realizado pelo veículo A29064 da frota 474 em 7 de
         setembro de 2022?<br />Onde a PM revistou os suspeitos?
@@ -372,6 +385,26 @@ AND id_veiculo = "A29064"
     }
     .controls button:hover {
         background: #c743c7;
+    }
+    .bicolor {
+        position: relative;
+        display: inline-block;
+    }
+
+    .bicolor img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .bicolor::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(45deg, #d2fb85, #c743c7);
+        mix-blend-mode: overlay; /* try: screen, overlay, difference */
+        opacity: 0.8; /* adjust intensity */
+        pointer-events: none;
     }
 
     @media (max-width: 768px) {

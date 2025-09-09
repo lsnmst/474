@@ -40,22 +40,22 @@
     >
         <div class="cover-image">
             <img src="cover.png" alt="Capa" />
+            <p style="text-align: center; font-size:0.8rem">
+                O 629 no buraco do lacerda, Gabriel Weber 2025
+            </p>
         </div>
 
         <div class="cover-text">
             <span>
-                <u>Instruções para se orientar neste espaço virtual.</u><br
-                />BIBLIOTECA: reúne recursos, textos, imagens e vídeos que
-                contribuem para uma leitura crítica das dinâmicas urbanas.
-                MAPAS: auxiliam a visualizar essas dinâmicas. DADOS: permitem
-                decodificar o sistema de transportes dentro dessas dinâmicas
-                urbanas. As
+                As
+                <span style="background-color:#d2fb85">DECODIFICAÇÕES</span> são
+                exercícios com instruções detalhadas para a leitura crítica e visualização
+                das dinâmicas do sistema de transporte urbano, destinadas a formular
+                contra-narrativas que possibilitem o direito à cidade. Selecione
+                uma ou mais decodificações da lista para revelar novas leituras sobre
+                o 474 Jacaré Copacabana e inspire-se para criar outras, reproduzindo
+                os exercícios sobre as linhas que lhe interessam.
             </span>
-            <span style="background-color:#d2fb85">DECODIFICAÇÕES</span>
-            <span
-                >são exercícios críticos com instruções detalhadas para a
-                leitura do sistema de transportes.</span
-            >
         </div>
     </div>
 {/if}
@@ -86,8 +86,8 @@
     }
 
     .cover-text {
-        font-size: 0.9rem;
-        line-height: 1.4rem;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
         text-align: start;
     }
 

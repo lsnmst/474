@@ -81,6 +81,14 @@
             8°C em relação à temperatura externa).
         </p>
 
+        <div class="bicolor" style="margin-top:2rem;">
+            <img src="paes-temp.jpeg" alt="Prefeito sensor temperatura" />
+        </div>
+        <p style="text-align: center; font-size:0.8rem; margin:1rem 0 3rem 0">
+            Fonte: Globo (17/12/2024), o prefeito Eduardo Paes mostrando o
+            sensor de temperatura instalado nos ônibus municipais
+        </p>
+
         <div class="split-cont">
             <div class="split-left">
                 <p>
@@ -95,8 +103,8 @@
                         veículo</a
                     >
                     .<br />Para acessar as temperaturas de todos os ônibus
-                    municipais em 17 de fevereiro de 2025, é necessário executar
-                    a seguinte busca:
+                    municipais em 17 de fevereiro de 2025, é necessário realizar
+                    a seguinte consulta:
                 </p>
             </div>
             <div class="split-right">
@@ -127,13 +135,13 @@
         <!-- CODE BLOCK -->
 
         <pre><code class="language-sql">
--- Lógica: selecionar TODAS as distintas linhas de ônibus (descricao_servico_jae) 
--- no banco de dados (`rj-smtr.br_rj_riodejaneiro_bilhetagem.gps_validador`) 
+-- Lógica: selecionar TODAS as distintas linhas de ônibus (na tabela designadas como servico_jae e descricao_servico_jae) 
+-- no banco de dados (`rj-smtr.monitoramento.gps_validador`) 
 -- que atendem às condições: data (`data` = "2025-02-17" ) e 
 -- temperatura em °C (temperatura > 50,0).
 
-SELECT DISTINCT id_servico_jae, descricao_servico_jae 
-FROM `rj-smtr.br_rj_riodejaneiro_bilhetagem.gps_validador` 
+SELECT DISTINCT servico_jae, descricao_servico_jae 
+FROM `rj-smtr.monitoramento.gps_validador` 
 WHERE `data` = "2025-02-17" 
 AND temperatura > 50.0
 
@@ -275,9 +283,8 @@ LINESTRING(-43.68531 -22.91527, -43.68566 -22.91496,
             </div>
         </div>
 
-        <SvgTemp src="/temp.svg" height="600px" width="100%" />
+        <SvgTemp src="/temp.svg" height="800px" width="100%" />
 
-        <br /> <br /> <br /> <br /><br /> <br />
         <h3>
             Qual foi a temperatura atingida pelos veículos da linha 474 em 17 de
             fevereiro de 2025?
@@ -329,6 +336,19 @@ LINESTRING(-43.68531 -22.91527, -43.68566 -22.91496,
                 </p>
             </div>
         </div>
+
+        <pre><code class="language-sql">
+-- Lógica: selecionar as viagens
+-- no banco de dados (`rj-smtr.monitoramento.gps_validador`) 
+-- que atendem às condições: data (`data` = "2025-02-17" ) e 
+-- linha (servico_jae = '474').
+
+SELECT * 
+FROM `rj-smtr.monitoramento.gps_validador` 
+WHERE `data` = "2025-02-17" 
+AND servico_jae = '474'
+
+    </code></pre>
 
         <table>
             <thead>
@@ -454,6 +474,27 @@ LINESTRING(-43.68531 -22.91527, -43.68566 -22.91496,
     td {
         padding: 0.6rem;
         text-align: center;
+    }
+
+    .bicolor {
+        position: relative;
+        display: inline-block;
+    }
+
+    .bicolor img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .bicolor::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(45deg, #d2fb85, #c743c7);
+        mix-blend-mode: overlay; /* try: screen, overlay, difference */
+        opacity: 0.8; /* adjust intensity */
+        pointer-events: none;
     }
 
     @media (max-width: 768px) {

@@ -108,6 +108,14 @@
             na cidade, como deslizamentos de terra e acidentes rodoviários.
         </p>
 
+        <div class="bicolor" style="margin-top:2rem;">
+            <img src="lacerda.jpg" alt="Prefeito sensor temperatura" />
+        </div>
+        <p style="text-align: center; font-size:0.8rem; margin:1rem 0 3rem 0">
+            O B73012 da Rubanil submerso no Buraco do Lacerda (2012). Foto:
+            Marcos Tristão
+        </p>
+
         <p style="font-family: 'Roboto Mono'; font-size:0.8rem;">
             Antes de sua criação, chuvas e outros eventos pegavam a
             administração pública e os cariocas de surpresa. Depois do COR,
@@ -154,8 +162,8 @@
                         target="_blank"
                         >Ocorrências disparadas pelo COR desde 2015</a
                     >. Por exemplo, para extrair todos os dados relativos a um
-                    bairro ou através de uma palavra-chave, é possível executar
-                    a busca:
+                    bairro ou através de uma palavra-chave, é possível realizar
+                    a consulta:
                 </p>
             </div>
             <div class="split-right">
@@ -398,6 +406,27 @@ WHERE id_pop IN ('5','31','32','33')
     tr.selected {
         background-color: #d2fb85;
         font-weight: bold;
+    }
+
+    .bicolor {
+        position: relative;
+        display: inline-block;
+    }
+
+    .bicolor img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .bicolor::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(45deg, #d2fb85, #c743c7);
+        mix-blend-mode: overlay; /* try: screen, overlay, difference */
+        opacity: 1; /* adjust intensity */
+        pointer-events: none;
     }
 
     @media (max-width: 768px) {

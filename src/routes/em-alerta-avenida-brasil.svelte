@@ -64,6 +64,15 @@
             e não sejam cobradas presenças dos estudantes e servidores em todos os
             campus. Quatro unidades de saúde estão temporariamente interditadas.
         </p>
+
+        <div class="bicolor" style="margin-top:2rem;">
+            <img src="avbrasil.jpeg" alt="Prefeito sensor temperatura" />
+        </div>
+        <p style="text-align: center; font-size:0.8rem; margin:1rem 0 3rem 0">
+            Marca de bala na janela do ônibus da linha 493 atingido enquanto
+            atravessava a Avenida Brasil — Foto: Reprodução/ TV Globo
+        </p>
+
         <p>
             Essas informações rapidamente se espalharam pelos grupos do WhatsApp
             das linhas que transitam pela Avenida Brasil, provocando a ira dos
@@ -148,7 +157,7 @@
                     lógica de combinar os pontos GPS de cada veículo) entre as
                     6h e as 6h30 do dia 10 de junho de 2025, horário em que teve
                     início a operação policial no complexo de Israel, é possível
-                    executar a busca:
+                    realizar a consulta:
                 </p>
             </div>
             <div class="split-right">
@@ -364,6 +373,27 @@ GROUP BY id_veiculo, servico;
     td {
         padding: 0.6rem;
         text-align: center;
+    }
+
+    .bicolor {
+        position: relative;
+        display: inline-block;
+    }
+
+    .bicolor img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .bicolor::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(45deg, #d2fb85, #c743c7);
+        mix-blend-mode: overlay; /* try: screen, overlay, difference */
+        opacity: 1; /* adjust intensity */
+        pointer-events: none;
     }
 
     @media (max-width: 768px) {
