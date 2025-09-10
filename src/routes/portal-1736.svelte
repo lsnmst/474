@@ -438,12 +438,6 @@ AND id_bairro IN ('3','5','6','8','10','11','12','14','17','20','24','32','51','
         padding: 3rem;
     }
 
-    .content-decode h3 {
-        line-height: 1.3;
-        padding: 2rem;
-        border: #ddd 2px solid;
-    }
-
     .svg-wrapper {
         position: relative; /* makes controls position relative to this box */
         display: inline-block;

@@ -303,37 +303,6 @@ GROUP BY id_veiculo, servico;
         padding: 3rem;
     }
 
-    .content-decode h3 {
-        line-height: 1.3;
-        padding: 2rem;
-        border: #ddd 2px solid;
-    }
-
-    .svg-wrapper {
-        position: relative; /* makes controls position relative to this box */
-        display: inline-block;
-    }
-    .controls {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    .controls button {
-        background: #ffffff00;
-        color: black;
-        border: 1px solid #ddd;
-        padding: 0.3rem 0.6rem;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1rem;
-        box-shadow: none;
-    }
-    .controls button:hover {
-        background: #c743c7;
-    }
     table::-webkit-scrollbar {
         width: 5px;
     }

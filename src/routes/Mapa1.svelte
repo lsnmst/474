@@ -112,15 +112,4 @@
         margin: 3rem 1rem 3rem 1rem;
         line-height: 1.3rem;
     }
-    pre {
-        background: #2d2d2d;
-        color: #f8f8f2;
-        padding: 1rem;
-        border-radius: 8px;
-        overflow-x: auto;
-    }
-    code {
-        font-family: "Fira Code", monospace;
-        font-size: 0.9rem;
-    }
 </style>

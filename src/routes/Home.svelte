@@ -108,5 +108,9 @@
         .cover {
             display: block;
         }
+
+        .cover-image {
+            margin-bottom: 5rem;
+        }
     }
 </style>

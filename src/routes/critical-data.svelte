@@ -71,91 +71,10 @@
         align-items: center;
     }
 
-    .split-cont {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 3rem;
-        margin-bottom: 2rem;
-    }
-
-    .split-right {
-        background: #c743c7;
-        color: #f3f3e4;
-        border-radius: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 1rem;
-    }
-
-    .split-right a {
-        color: #f3f3e4;
-        text-decoration: underline;
-    }
-
-    .pres-decode {
-        font-size: 1.2rem;
-        line-height: 1.4rem;
-    }
-
-    .refer-decode {
-        border-left: 1px solid #ddd;
-        padding: 1rem;
-        border-radius: 8px;
-    }
-
-    .refer-decode h4 {
-        margin-bottom: 1.5rem;
-    }
-
-    .refer-decode ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .refer-decode li {
-        margin-bottom: 1.5rem;
-        line-height: 1rem;
-    }
-
     .content-decode {
         padding: 3rem;
     }
 
-    .content-decode h3 {
-        line-height: 1.3;
-        padding: 2rem;
-        border: #ddd 2px solid;
-    }
-
-    .svg-wrapper {
-        position: relative; /* makes controls position relative to this box */
-        display: inline-block;
-    }
-    .controls {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    .controls button {
-        background: #ffffff00;
-        color: black;
-        border: 1px solid #ddd;
-        padding: 0.3rem 0.6rem;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1rem;
-        box-shadow: none;
-    }
-    .controls button:hover {
-        background: #c743c7;
-    }
     table::-webkit-scrollbar {
         width: 5px;
     }
@@ -168,17 +87,6 @@
     table::-webkit-scrollbar-thumb:hover {
         background: #555;
     }
-    pre {
-        background: #2d2d2d;
-        color: #f8f8f2;
-        padding: 1rem;
-        border-radius: 8px;
-        overflow-x: auto;
-    }
-    code {
-        font-family: "Fira Code", monospace;
-        font-size: 0.9rem;
-    }
 
     table {
         font-family: "Roboto Mono", sans-serif;
@@ -190,11 +98,6 @@
         color: rgb(42, 10, 92) !important;
         font-weight: 400;
         text-decoration: underline;
-    }
-
-    p {
-        margin: 3rem 1rem 3rem 1rem;
-        line-height: 1.3rem;
     }
 
     th,
@@ -210,10 +113,6 @@
         .intro-decode {
             display: inline-block;
             padding: 1rem;
-        }
-        .split-cont {
-            display: inline-block;
-            max-width: 90%;
         }
         table {
             table-layout: fixed !important;

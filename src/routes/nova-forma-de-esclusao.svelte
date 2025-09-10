@@ -6,57 +6,12 @@
     import { produto474 } from "../data/produto474.js";
     import { dinhero } from "../data/dinhero.js";
     import { dinhero_erro } from "../data/dinhero_erro.js";
-    import Panzoom from "@panzoom/panzoom";
     import SvgDinhero from "./Mapa4.svelte";
     import SvgCelular from "./Mapa5.svelte";
-
-    export let src = "dinhero.svg";
-    export let height = "1000px";
-    export let width = "100%";
-
-    let svgContainer;
-    let panzoom;
 
     onMount(() => {
         Prism.highlightAll();
     });
-
-    onMount(async () => {
-        const url = `${import.meta.env.BASE_URL}${src}`;
-        const res = await fetch(url);
-        const svgText = await res.text();
-
-        svgContainer.innerHTML = svgText;
-
-        const svgElement = svgContainer.querySelector("svg");
-
-        if (svgElement) {
-            panzoom = Panzoom(svgElement, {
-                contain: "outside",
-                maxScale: 10,
-                minScale: 1,
-            });
-
-            svgElement.parentElement.addEventListener("wheel", (e) => {
-                if (e.ctrlKey) {
-                    e.preventDefault();
-                    panzoom.zoomWithWheel(e);
-                }
-            });
-        }
-    });
-
-    function zoomIn() {
-        panzoom?.zoomIn();
-    }
-
-    function zoomOut() {
-        panzoom?.zoomOut();
-    }
-
-    function reset() {
-        panzoom?.reset();
-    }
 </script>
 
 <div class="content">
@@ -487,31 +442,6 @@ ORDER BY variacao_percentual DESC;
         border: #ddd 2px solid;
     }
 
-    .svg-wrapper {
-        position: relative; /* makes controls position relative to this box */
-        display: inline-block;
-    }
-    .controls {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    .controls button {
-        background: #ffffff00;
-        color: black;
-        border: 1px solid #ddd;
-        padding: 0.3rem 0.6rem;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1rem;
-        box-shadow: none;
-    }
-    .controls button:hover {
-        background: #c743c7;
-    }
     table::-webkit-scrollbar {
         width: 5px;
     }

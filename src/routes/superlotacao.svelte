@@ -6,55 +6,10 @@
     import { lotacao } from "../data/lotacao.js";
     import { lotacao_ele } from "../data/lotacao_ele.js";
     import Mapa3 from "./Mapa3.svelte";
-    import Panzoom from "@panzoom/panzoom";
-
-    export let src = "h3re9.svg";
-    export let height = "1000px";
-    export let width = "100%";
-
-    let svgContainer;
-    let panzoom;
 
     onMount(() => {
         Prism.highlightAll();
     });
-
-    onMount(async () => {
-        const url = `${import.meta.env.BASE_URL}${src}`;
-        const res = await fetch(url);
-        const svgText = await res.text();
-
-        svgContainer.innerHTML = svgText;
-
-        const svgElement = svgContainer.querySelector("svg");
-
-        if (svgElement) {
-            panzoom = Panzoom(svgElement, {
-                contain: "outside",
-                maxScale: 10,
-                minScale: 1,
-            });
-
-            svgElement.parentElement.addEventListener("wheel", (e) => {
-                if (e.ctrlKey) {
-                    e.preventDefault();
-                    panzoom.zoomWithWheel(e);
-                }
-            });
-        }
-    });
-
-    function zoomIn() {
-        panzoom?.zoomIn();
-    }
-
-    function zoomOut() {
-        panzoom?.zoomOut();
-    }
-
-    function reset() {
-        panzoom?.reset();
-    }
 </script>
 
 <div class="content">
@@ -440,31 +395,6 @@ JOIN shapes g
         border: #ddd 2px solid;
     }
 
-    .svg-wrapper {
-        position: relative; /* makes controls position relative to this box */
-        display: inline-block;
-    }
-    .controls {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    .controls button {
-        background: #ffffff00;
-        color: black;
-        border: 1px solid #ddd;
-        padding: 0.3rem 0.6rem;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1rem;
-        box-shadow: none;
-    }
-    .controls button:hover {
-        background: #c743c7;
-    }
     table::-webkit-scrollbar {
         width: 5px;
     }
