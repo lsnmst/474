@@ -1,8 +1,9 @@
 export const textos = [
-    { title: "474 Jacaré/Copacabana", link: "https://sobinfluencia.com/produtos/474-jacare-copacabana/" },
-    { title: "Linhas", link: "/textos/linhas" },
-    { title: "Nunca é noite no mapa", link: "/textos/nunca-e-moite-no-mapa" },
-    { title: "Como acessar dados no data lake da Prefeitura do Rio de Janeiro", link: "https://docs.dados.rio/tutoriais/como-acessar-dados/#criando-uma-conta" },
+    { title: "474 JACARÉ/COPACABANA. O ensaio político-arquitetônico sobre a cidade como agente de exclusão", link: "https://sobinfluencia.com/produtos/474-jacare-copacabana/" },
+    { title: "LINHAS. O arquivo que traz as histórias dos ônibus que trabalhadorxs e moradorxs lotam todos os dias, vítimas da violência urbana, da discriminação e do racismo, de assédio sexual, de eventos climáticos extremos, da negligência ou da falta de manutenção, de falta de alternativas", link: "/textos/linhas" },
+    { title: "NUNCA É NOITE NO MAPA. Curta-metragem sobre cartografia crítica", link: "/textos/nunca-e-moite-no-mapa" },
+    { title: "Exercícios de POLIGRAFIA SOCIAL", link: "https://socialpoligraphy.vado.li" },
+    { title: "Como acessar dados no DATA LAKE da Prefeitura do Rio de Janeiro", link: "https://docs.dados.rio/tutoriais/como-acessar-dados/#criando-uma-conta" },
 ];
 
 export const mapas = [
