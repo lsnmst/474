@@ -2,8 +2,9 @@ export const textos = [
     { title: "474 JACARÉ/COPACABANA. O ensaio político-arquitetônico sobre a cidade como agente de exclusão", link: "https://sobinfluencia.com/produtos/474-jacare-copacabana/" },
     { title: "LINHAS. O arquivo que traz as histórias dos ônibus que trabalhadorxs e moradorxs lotam todos os dias, vítimas da violência urbana, da discriminação e do racismo, de assédio sexual, de eventos climáticos extremos, da negligência ou da falta de manutenção, de falta de alternativas", link: "/textos/linhas" },
     { title: "NUNCA É NOITE NO MAPA. Curta-metragem sobre cartografia crítica", link: "/textos/nunca-e-moite-no-mapa" },
-    { title: "Exercícios de POLIGRAFIA SOCIAL", link: "https://socialpoligraphy.vado.li" },
+    { title: "POLIGRAFIA SOCIAL", link: "https://socialpoligraphy.vado.li" },
     { title: "Como acessar dados no DATA LAKE da Prefeitura do Rio de Janeiro", link: "https://docs.dados.rio/tutoriais/como-acessar-dados/#criando-uma-conta" },
+    { title: "Exercício. DESDE A POLIGRAFIA SOCIAL AO MAPA", link: "/textos/desde-poligrafia-social-ao-mapa" },
 ];
 
 export const mapas = [

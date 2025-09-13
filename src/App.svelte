@@ -7,6 +7,7 @@
   import Nunca from "./routes/Nunca.svelte";
   import Linhas from "./routes/Linhas.svelte";
   import Criticaldata from "./routes/critical-data.svelte";
+  import Exercicio from "./routes/desde-poligrafia-social-ao-mapa.svelte"
   import Texto3 from "./routes/Texto3.svelte";
   import Texto4 from "./routes/Texto4.svelte";
   import Mapa1 from "./routes/Mapa1.svelte";
@@ -33,6 +34,7 @@
     "/textos/critical-data": Criticaldata,
     "/textos/texto3": Texto3,
     "/textos/texto4": Texto4,
+    "/textos/desde-poligrafia-social-ao-mapa" : Exercicio,
     "/mapas/mapa1": Mapa1,
     "/mapas/mapa2": Mapa2,
     "/mapas/mapa3": Mapa3,
