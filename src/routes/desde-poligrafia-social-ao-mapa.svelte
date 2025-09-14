@@ -55,9 +55,12 @@
 
     let fullscreen = false;
     let fullscreenCentral = false;
+    let fullscreenPavuna = false;
+
     let imgSrc = "poligrafia.jpg";
     let imgSrcGeo = "geojson.png";
     let imgSrcCentral = "central.png";
+    let imgSrcPavuna = "pavuna.png";
 </script>
 
 <div class="content">
@@ -83,7 +86,7 @@
             <ul>
                 <li>
                     <a
-                        href="hhttps://console.cloud.google.com/bigquery?p=rj-smtr&d=bilhetagem&t=passageiro_hora&page=table"
+                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=bilhetagem&t=passageiro_hora&page=table"
                         target="_blank"
                         >Tabela de contagem do número de passageiros por hora.
                         Agrega valores da tabela de transações por: data, hora,
@@ -107,6 +110,16 @@
                         target="_blank"
                         >Malha hexagonal para análises espaciais da Secretaria
                         Municipal de Transportes</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_veiculos&t=gps_sppo&page=table"
+                        target="_blank"
+                        >Tabela com os dados tratados de registros de GPS do
+                        SPPO, incluindo velocidade estimada, estado de
+                        movimento, parada em terminal ou garagem e interseção
+                        com o traçado da linha informada</a
                     >
                 </li>
             </ul>
@@ -370,8 +383,8 @@ GROUP BY data, produto, tipo_transacao
         <div style="min-height: 50px;"></div>
 
         <pre><code class="language-sql">
--- Criar as geometrias de todos os veículos que transitam pela célula hexagonal onde se encontra o acesso C da estação ferroviária Central do Brasil em um determinado dia.
--- Descrição técnica: esta consulta retorna uma linha por veículo (como WKT) para serviços que passam pelo tile_id ‘89a8a06a56bffff’ em 01/09/2025, agregando pontos GPS do gps_sppo.
+-- Criar as geometrias de todos os veículos que transitam e embarcam passageiros pela célula hexagonal onde se encontra o acesso C da estação ferroviária Central do Brasil em um determinado dia.
+-- Descrição técnica: esta consulta retorna uma linha por veículo (como WKT) para serviços que transitam e embarcam passageiros pelo tile_id ‘89a8a06a56bffff’ em 01/09/2025, agregando pontos GPS do gps_sppo.
 
 -- 1 Definindo o hexágono de interesse (tile_id = "89a8a06a56bffff")
 WITH hex AS (
@@ -424,24 +437,71 @@ JOIN hex h
 
 </code></pre>
 
-        <!-- svelte-ignore a11y_click_events_have_key_events -->
-        <!-- svelte-ignore a11y_no_static_element_interactions -->
-        <div class="image-box" on:click={() => (fullscreenCentral = true)}>
-            <img src="central.png" alt="Preview" />
+        <div class="split-cont" style="align-items: center;">
+            <div class="split-left">
+                Onde é possível chegar embarcando em um ponto próximo à entrada
+                C da estação ferroviária Central do Brasil
+            </div>
+            <div class="split-right">
+                <!-- svelte-ignore a11y_click_events_have_key_events -->
+                <!-- svelte-ignore a11y_no_static_element_interactions -->
+                <div
+                    class="image-box"
+                    on:click={() => (fullscreenCentral = true)}
+                >
+                    <img src="central.png" alt="Preview" />
+                </div>
+
+                <!-- Fullscreen Modal -->
+                {#if fullscreenCentral}
+                    <!-- svelte-ignore a11y_click_events_have_key_events -->
+                    <!-- svelte-ignore a11y_no_static_element_interactions -->
+                    <div
+                        class="overlay"
+                        on:click={() => (fullscreenCentral = false)}
+                    >
+                        <img
+                            src="central.png"
+                            alt="Fullscreen"
+                            class="fullscreen-img"
+                        />
+                    </div>
+                {/if}
+            </div>
         </div>
 
-        <!-- Fullscreen Modal -->
-        {#if fullscreenCentral}
-            <!-- svelte-ignore a11y_click_events_have_key_events -->
-            <!-- svelte-ignore a11y_no_static_element_interactions -->
-            <div class="overlay" on:click={() => (fullscreenCentral = false)}>
-                <img
-                    src="central.png"
-                    alt="Fullscreen"
-                    class="fullscreen-img"
-                />
+        <div class="split-cont" style="align-items: center;">
+            <div class="split-left">
+                Onde é possível chegar embarcando em um ponto próximo à
+                passarela do metrô da Pavuna
             </div>
-        {/if}
+            <div class="split-right">
+                <!-- svelte-ignore a11y_click_events_have_key_events -->
+                <!-- svelte-ignore a11y_no_static_element_interactions -->
+                <div
+                    class="image-box"
+                    on:click={() => (fullscreenPavuna = true)}
+                >
+                    <img src="pavuna.png" alt="Preview" />
+                </div>
+
+                <!-- Fullscreen Modal -->
+                {#if fullscreenPavuna}
+                    <!-- svelte-ignore a11y_click_events_have_key_events -->
+                    <!-- svelte-ignore a11y_no_static_element_interactions -->
+                    <div
+                        class="overlay"
+                        on:click={() => (fullscreenPavuna = false)}
+                    >
+                        <img
+                            src="pavuna.png"
+                            alt="Fullscreen"
+                            class="fullscreen-img"
+                        />
+                    </div>
+                {/if}
+            </div>
+        </div>
     </div>
 </div>
 

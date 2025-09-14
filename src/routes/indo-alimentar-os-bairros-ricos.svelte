@@ -76,7 +76,7 @@
             <ul>
                 <li>
                     <a
-                        href="hhttps://console.cloud.google.com/bigquery?p=rj-smtr&d=bilhetagem&t=passageiro_hora&page=table"
+                        href="https://console.cloud.google.com/bigquery?p=rj-smtr&d=bilhetagem&t=passageiro_hora&page=table"
                         target="_blank"
                         >Tabela de contagem do número de passageiros por hora.
                         Agrega valores da tabela de transações por: data, hora,

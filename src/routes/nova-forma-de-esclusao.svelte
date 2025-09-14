@@ -36,6 +36,14 @@
                         realizadas no sistema de transporte municipal</a
                     >
                 </li>
+                <li>
+                    <a
+                        href="https://dadosabertos.rj.gov.br/dataset/isp-estatisticas-de-seguranca-publica/resource/3e553e0b-ff90-48ad-9584-90df6baeea6c"
+                        target="_blank"
+                        >Série histórica mensal por área de Circunscrição
+                        Integrada de Segurança Pública (CISP)</a
+                    >
+                </li>
             </ul>
         </div>
     </div>
