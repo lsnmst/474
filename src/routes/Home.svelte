@@ -20,7 +20,10 @@
                 target="_blank">Alessandro Musetta</a
             >
             e
-            <a href="" target="_blank">Gabriel Weber</a><br />
+            <a
+                href="https://www.cienciavitae.pt/en/7A1A-58E2-0FEF"
+                target="_blank">Gabriel Weber</a
+            ><br />
             15 - 17 de setembro de 2025, Sala do Futuro, FAU/UFRJ,<br />
             Organizada por
             <a href="https://ippur.ufrj.br/" target="_blank"

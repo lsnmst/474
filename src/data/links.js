@@ -45,12 +45,12 @@ export const dadosLinks = [
     {
         title: "Tabela de posições de GPS de todos os validadores da Jaé instalados, incluindo estado do equipamento, serviço, sentido e veículo associado e temperatura do veículo.",
         link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=monitoramento&t=gps_validador&page=table",
-        decodeRefs: ["/decode/rio-60-graus", "/decode/pes-molhados"]
+        decodeRefs: ["/decode/rio-60-graus"]
     },
     {
         title: "Tabela com os dados tratados de registros de GPS do SPPO, incluindo velocidade estimada, estado de movimento, parada em terminal ou garagem e interseção com o traçado da linha informada",
         link: "https://console.cloud.google.com/bigquery?p=rj-smtr&d=br_rj_riodejaneiro_veiculos&t=gps_sppo&page=table",
-        decodeRefs: ["/decode/uma-questao-de-cor", "/decode/em-alerta-avenida-brasil"]
+        decodeRefs: ["/decode/uma-questao-de-cor", "/decode/em-alerta-avenida-brasil", "/decode/pes-molhados"]
     },
     {
         title: "Tabela de contagem do número de passageiros por hora. Agrega valores da tabela de transações por: data, hora, modo, consorcio, operadora, servico, sentido e tipo_transacao",
